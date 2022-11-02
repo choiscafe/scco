@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  get '/hello', to: 'application#hello_world'
+  get '/hello', to: 'session#hello_world'
 end

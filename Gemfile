@@ -1,3 +1,5 @@
+# set :database_file, "config/database.yml"
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
