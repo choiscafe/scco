@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Counter } from './features/counter/Counter'
 
 function App() {
+
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -13,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Counter />
         <Switch>
           <Route path="/testing">
             <h1>Test Route</h1>
