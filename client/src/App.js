@@ -1,29 +1,73 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Counter } from './features/counter/Counter'
+import Login from './Login'
+import Auth from './Auth'
+import NavBar from './NavBar';
+import ProductsContainer from './ProductsContainer'
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  const [currentUser, setCurrentUser] = useState('')
+  const [errors, setErrors] = useState(false)
+  const [products, setProducts] = useState([])
+  
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+    fetch("/me")
+    .then(response => {
+      if (response.ok) {
+        response.json().then(user => {
+          updateUser(user)
+          fetchProducts()
+        });
+      }
+    });
+  }, [])
+
+  const fetchProducts = () => {
+    fetch("/products")
+      .then(r => {
+        if(r.ok){
+          r.json().then(setProducts)
+        }else {
+          r.json().then(data => setErrors(data.error))
+        }
+    })
+  }
+
+  const updateUser = (user) => setCurrentUser(user)
 
   return (
     <BrowserRouter>
       <div className="App">
         <Counter />
-        <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
-          </Route>
-          <Route path="/">
-            <h1>Page Count: {count}</h1>
-          </Route>
-        </Switch>
+        <NavBar updateUser={updateUser} currentUser={currentUser}/>
+        {!currentUser ? 
+          <Switch>
+            <Route exact path="/login">
+              <Login updateUser={updateUser} />
+            </Route> 
+            <Route exact path="/signup">
+              <Auth setCurrentUser={setCurrentUser} />
+            </Route>
+            <Route exact path="/">
+                <h1>Hello, Welcome to SCCO</h1>
+                <h2>Know your skin food</h2>
+              </Route>
+          </Switch> :
+          <Switch>
+            <Route exact path="/">
+              <h1>Welcome to SCCO</h1>
+              <h2>Welcome, {currentUser.username}!</h2>
+            </Route>
+            <Route path="/products">
+              <h1>Products</h1>
+              <ProductsContainer
+                products={products}/>
+            </Route>
+          </Switch>
+        }
       </div>
     </BrowserRouter>
   );

@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_175835) do
     t.string "category"
     t.string "brand"
     t.string "image"
-    t.integer "price"
+    t.string "price_size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

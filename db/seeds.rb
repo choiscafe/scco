@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 User.create(name: "Cho", username: "Cho", password: "Cho")
-Product.create(name: "Calm + Restore Triple Oat Hydrating Face Serum for Sensitive Skin", category: "serum", brand: "Aveeno", image: "https://m.media-amazon.com/images/I/71uEPq-7ivL._SL1500_.jpg", price: 19.67)
+Product.create(name: "Calm + Restore Triple Oat Hydrating Face Serum for Sensitive Skin", category: "serum", brand: "Aveeno", image: "https://m.media-amazon.com/images/I/71uEPq-7ivL._SL1500_.jpg", price_size: "$19.67/1 fl. Oz")
 Review.create(score: 4, comments: "i have very sensitive dry skin and i absolutely love this there’s really isn’t a sent to it just smells like oats which i like.", tips: "The product is very suitable for sensitive skin", picture: "https://myskincareregimehome.files.wordpress.com/2022/06/wp-1656361796370.jpg", product_id: 1, user_id: 1)
 Ingredient.create(name: "Water", ewg_rating: 1, toxic: false, irritant: false, skin_type: "", functional: "")
 Ingredient.create(name: "Glycerin",ewg_rating: 1, toxic: false, irritant: false, skin_type: "", functional: "")
