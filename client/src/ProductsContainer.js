@@ -1,6 +1,6 @@
 import ProductCard from './ProductCard'
 
-function ProductsContainer({ products }) {
+function ProductsContainer({ products}) {
   
 
     const productsList = products.map((product) => {
@@ -8,8 +8,9 @@ function ProductsContainer({ products }) {
     return (
       <ProductCard
         key={product.id}
-        item={product}
-
+        product={product}
+        // ingredients={ingredients}
+        // setIngredients={setIngredients}
       />  
     )
   })

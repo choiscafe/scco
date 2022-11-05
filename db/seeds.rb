@@ -11,7 +11,7 @@ Review.create(score: 4, comments: "i have very sensitive dry skin and i absolute
 Ingredient.create(name: "Water", ewg_rating: 1, toxic: false, irritant: false, skin_type: "", functional: "")
 Ingredient.create(name: "Glycerin",ewg_rating: 1, toxic: false, irritant: false, skin_type: "", functional: "")
 Ingredient.create(name: "Butylene Glycol",ewg_rating: 1, toxic: false, irritant: false, skin_type: "Good for Dry Skin", functional: "")
-Ingredient.create(name:  "Bis-PEG-18 Methyl Ether Dimethyl Silane",ewg_rating: 3, toxic: false, irritant: false, skin_type: "", functional: "")
+Ingredient.create(name: "Bis-PEG-18 Methyl Ether Dimethyl Silane",ewg_rating: 3, toxic: false, irritant: false, skin_type: "", functional: "")
 Ingredient.create(name: "Isodecyl Neopentanoate",ewg_rating: 1, toxic: false, irritant: false, skin_type: "", functional: "")
 Ingredient.create(name: "Pentaerythrityl Tetraethylhexanoate",ewg_rating: 1, toxic: false, irritant: false, skin_type: "", functional: "")
 Ingredient.create(name: "Ethylhexylglycerin",ewg_rating: 2, toxic: false, irritant: false, skin_type: "", functional: "")

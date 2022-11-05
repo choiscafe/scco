@@ -5,4 +5,5 @@ class ProductsController < ApplicationController
     products = Product.all
     render json: products, status: :ok
   end
+  
 end

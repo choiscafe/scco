@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   get '/me', to: 'users#show'
   post '/login', to: 'sessions#create'
-
+  delete "/logout", to: "sessions#destroy"
 
 end

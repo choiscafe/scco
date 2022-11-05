@@ -11,32 +11,33 @@ function App() {
   const [currentUser, setCurrentUser] = useState('')
   const [errors, setErrors] = useState(false)
   const [products, setProducts] = useState([])
-  
 
   useEffect(() => {
     fetch("/me")
-    .then(response => {
-      if (response.ok) {
-        response.json().then(user => {
+    .then(r => {
+      if (r.ok) {
+        r.json().then(user => {
           updateUser(user)
-          fetchProducts()
         });
       }
     });
   }, [])
+  
+  const updateUser = (user) => setCurrentUser(user)
 
-  const fetchProducts = () => {
+  useEffect(() => {
     fetch("/products")
       .then(r => {
         if(r.ok){
-          r.json().then(setProducts)
-        }else {
-          r.json().then(data => setErrors(data.error))
+          r.json().then(productslist => {
+            showProducts(productslist)
+          })
         }
-    })
-  }
+      })
+  }, [])
 
-  const updateUser = (user) => setCurrentUser(user)
+  const showProducts = (productslist) => setProducts(productslist)
+
 
   return (
     <BrowserRouter>
@@ -64,7 +65,8 @@ function App() {
             <Route path="/products">
               <h1>Products</h1>
               <ProductsContainer
-                products={products}/>
+                products={products}
+              />
             </Route>
           </Switch>
         }
@@ -72,6 +74,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
 
 export default App;

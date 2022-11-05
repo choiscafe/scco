@@ -1,16 +1,8 @@
-// import { Link, useHistory } from 'react-router-dom'
-import { useState } from 'react'
+import IngredientsContainer from './IngredientsContainer'
 
-function ProductCard({ item }) {
+function ProductCard({ product }) {
 
-  // const [errors, setErrors] = useState()
-
-  // const history = useHistory()
-
-  const {id, name, category, brand, image, price_size} = item
-
-  // if(errors) return <h1>{errors}</h1>
-  
+  const {id, name, category, brand, image, price_size, ingredients } = product
 
   return (
     <div className="product-card">
@@ -19,7 +11,8 @@ function ProductCard({ item }) {
       <p>{category}</p>
       <p>{brand}</p>
       <p>{price_size}</p>
-
+      <p>Ingredients: </p>
+      <IngredientsContainer ingredients={ingredients} />
     </div>
   )
 }

@@ -6,7 +6,8 @@ function NavBar({ updateUser, currentUser }){
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         updateUser(null);
-      }
+        
+      }console.log(updateUser(null))
     })
   }
 
