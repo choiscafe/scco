@@ -13,6 +13,18 @@ function App() {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
+    fetch("/products")
+      .then(r => {
+        if(r.ok){
+          r.json().then(productslist => {
+            showProducts(productslist)
+          })
+        }
+      })
+  }, [])
+
+  const showProducts = (productslist) => setProducts(productslist)
+  useEffect(() => {
     fetch("/me")
     .then(r => {
       if (r.ok) {
@@ -25,18 +37,7 @@ function App() {
   
   const updateUser = (user) => setCurrentUser(user)
 
-  useEffect(() => {
-    fetch("/products")
-      .then(r => {
-        if(r.ok){
-          r.json().then(productslist => {
-            showProducts(productslist)
-          })
-        }
-      })
-  }, [])
-
-  const showProducts = (productslist) => setProducts(productslist)
+  
 
 
   return (
@@ -53,9 +54,15 @@ function App() {
               <Auth setCurrentUser={setCurrentUser} />
             </Route>
             <Route exact path="/">
-                <h1>Hello, Welcome to SCCO</h1>
-                <h2>Know your skin food</h2>
-              </Route>
+              <h1>Hello, Welcome to SCCO</h1>
+              <h2>Know your skin food</h2>
+            </Route>
+            <Route path="/products">
+              <h1>Products</h1>
+              <ProductsContainer
+                products={products}
+              />
+            </Route>
           </Switch> :
           <Switch>
             <Route exact path="/">
