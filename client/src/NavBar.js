@@ -14,8 +14,6 @@ function NavBar({ updateUser, currentUser }){
   return(
     <div className="App-header">
       <NavLink to="/products">Products</NavLink>{" "}
-      <NavLink to="/maestros" className="navBarLink">Maestros</NavLink>{" "}
-
       {currentUser? (
         <header>
           <p>Welcome, {currentUser.username}!</p>

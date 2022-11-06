@@ -37,9 +37,6 @@ function App() {
   
   const updateUser = (user) => setCurrentUser(user)
 
-  
-
-
   return (
     <BrowserRouter>
       <div className="App">
