@@ -14,6 +14,17 @@ function NavBar({ updateUser, currentUser }){
   return(
     <div className="App-header">
       <NavLink to="/products">Products</NavLink>{" "}
+      <NavLink to="/">Skincare</NavLink>{" "}
+      <NavLink to="/">Cleansing/Peeling</NavLink>{" "}
+      <NavLink to="/">Mask</NavLink>{" "}
+      <NavLink to="/">Suncare</NavLink>{" "}
+      <NavLink to="/">Base Makeup</NavLink>{" "}
+      <NavLink to="/">Eye Makeup</NavLink>{" "}
+      <NavLink to="/">Lip Makeup</NavLink>{" "}
+      <NavLink to="/">Body</NavLink>{" "}
+      <NavLink to="/">Hair</NavLink>{" "}
+      <NavLink to="/">Nail</NavLink>{" "}
+      <NavLink to="/">Perfume</NavLink>{" "}
       {currentUser? (
         <header>
           <p>Welcome, {currentUser.username}!</p>

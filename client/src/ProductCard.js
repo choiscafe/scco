@@ -1,8 +1,9 @@
 import IngredientsContainer from './IngredientsContainer'
+import ReviewsContainer from './ReviewsContainer'
 
 function ProductCard({ product }) {
 
-  const {id, name, category, brand, image, price_size, ingredients } = product
+  const {id, name, category, brand, image, price_size, ingredients, reviews } = product
 
   return (
     <div className="product-card">
@@ -11,8 +12,10 @@ function ProductCard({ product }) {
       <p>{category}</p>
       <p>{brand}</p>
       <p>{price_size}</p>
-      <p>Ingredients: </p>
-      <IngredientsContainer ingredients={ingredients} />
+      <h2>Ingredients: </h2>
+        <IngredientsContainer ingredients={ingredients} />
+      <h2>Reviews: </h2>
+        <ReviewsContainer reviews={reviews}/>
     </div>
   )
 }
