@@ -1,6 +1,16 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized
 
+  def index
+    reviews = Review.all
+    if reviews&.authenticate(params[:username])
+      session[:user_id] = user.id
+      render json: reviews, status: :ok
+    else
+      render json: { error: "Invalid" }
+    end
+  end
+
   def create
     user = User.find_by(username:params[:username])
     if user&.authenticate(params[:password])

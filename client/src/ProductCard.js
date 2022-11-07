@@ -3,21 +3,13 @@ import ReviewsContainer from './ReviewsContainer'
 import NewReviewForm from './NewReviewForm'
 import { useState } from "react";
 
-function ProductCard({ product }) {
+function ProductCard({ product, currentUser, updateReview }) {
 
   const [showForm, setShowForm] = useState(false);
-  const [reviewList, setReviewsList] = useState([]);
+
   const {id, name, category, brand, image, price_size, ingredients, reviews } = product
 
-  const updateReview = (updatedReview) => setReviewsList(current => {
-    return current.map(review => {
-      if(review.id === updatedReview.id){
-        return updatedReview
-       } else {
-         return review
-       } 
-      })
-    })
+  
 
   function handleClick() {
     setShowForm((showForm) => !showForm);
@@ -33,6 +25,7 @@ function ProductCard({ product }) {
       <h2>Ingredients: </h2>
         <IngredientsContainer ingredients={ingredients} />
       <h2>Reviews: </h2>
+      {!currentUser}
         {showForm ? <NewReviewForm updateReview={updateReview}/> : null}
         {!showForm ? <div className="buttonContainer">
           <button onClick={handleClick}>Add a Review</button>

@@ -25,6 +25,7 @@ function NavBar({ updateUser, currentUser }){
       <NavLink to="/">Hair</NavLink>{" "}
       <NavLink to="/">Nail</NavLink>{" "}
       <NavLink to="/">Perfume</NavLink>{" "}
+      <NavLink to="/myreviews">My Reviews</NavLink>{" "}
       {currentUser? (
         <header>
           <p>Welcome, {currentUser.username}!</p>
