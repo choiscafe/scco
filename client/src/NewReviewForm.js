@@ -9,7 +9,7 @@ function NewReviewForm() {
         <input type="text" name="name" placeholder="Review Comments" /><br></br>
         <input type="text" name="name" placeholder="Review Tips" /><br></br>
         <input type="text" name="image" placeholder="Image URL" /><br></br>
-        <button type="submit">Add Review</button>
+        {/* <button type="submit">Add Review</button> */}
       </form>
     </div>
   );
