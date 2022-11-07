@@ -1,5 +1,6 @@
 import IngredientsContainer from './IngredientsContainer'
 import ReviewsContainer from './ReviewsContainer'
+import NewReviewForm from './NewReviewForm'
 
 function ProductCard({ product }) {
 
@@ -15,6 +16,7 @@ function ProductCard({ product }) {
       <h2>Ingredients: </h2>
         <IngredientsContainer ingredients={ingredients} />
       <h2>Reviews: </h2>
+        <NewReviewForm />
         <ReviewsContainer reviews={reviews}/>
     </div>
   )
