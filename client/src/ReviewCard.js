@@ -10,7 +10,7 @@ function ReviewCard({ review, handleDeleteReview }){
   const {id, score, comments, tips, picture, product_id, user_id, user} = review
 
   function handleDeleteClick() {
-    fetch(`/reviews/${id}`, {
+    fetch(`/myreviews/${id}`, {
       method: 'DELETE'
     }).then((res) => {
       if (res.ok) {
@@ -32,7 +32,7 @@ function ReviewCard({ review, handleDeleteReview }){
       <img src={picture} alt={product_id}/>
       <p>{user_id}</p>
       <p>{user}</p>
-      <span> <button className='edit-btn'><Link to={`/reviews/${id}/edit`}>Edit Review</Link></button></span>
+      <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
       <span> <button className='del-btn' onClick={handleDeleteClick}><strong>Delete Review</strong></button></span>
     </div>
   )

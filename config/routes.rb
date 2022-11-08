@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
   get '/products', to: 'products#index'
   get '/reviews', to: 'reviews#index'
+  # patch '/reviews/:id/edit', to: 'reviews#update'
   post '/login', to: 'sessions#create'
   delete "/logout", to: "sessions#destroy"
 

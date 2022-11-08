@@ -96,7 +96,6 @@ function App() {
               <MyReviewsContainer reviews={reviews} currentUser={currentUser} handleDeleteReview={handleDeleteReview}/>
             </Route>
             <Route exact path="/myreviews/:id/edit">
-              <h1>Edit Review</h1>
               <EditReviewForm updateReview={updateReview}/>
             </Route>
           </Switch>

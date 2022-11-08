@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 function EditReviewForm({ updateReview }) {
 
@@ -16,7 +16,7 @@ function EditReviewForm({ updateReview }) {
   
 //Get the review
   useEffect(() => {
-    fetch(`/review/${id}`)
+    fetch(`/reviews/${id}`)
     .then(res => {
       if(res.ok){
         res.json().then(setFormData)
@@ -27,8 +27,7 @@ function EditReviewForm({ updateReview }) {
 //Patch
   function onSubmit(e){
     e.preventDefault()
-    console.log('hi')
-    fetch(`/artworks/${id}`, {
+    fetch(`/reviews/${id}`, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({...formData})
@@ -50,7 +49,7 @@ function EditReviewForm({ updateReview }) {
   return (
     <div className="edit-review-form">
       <div className="edit-review-form__header">
-        <h1>Edit Review</h1>
+        <h1>{`Edit Review Product ${id}`}</h1>
         <form onSubmit={onSubmit}>
           <input type="number" name="score" step="1" onChange={handleChange} value={formData.score} placeholder="Review Score" /><br></br>
           <input type="text" name="comments" onChange={handleChange} value={formData.comments} placeholder="Review Comments" /><br></br>
@@ -58,7 +57,7 @@ function EditReviewForm({ updateReview }) {
           <input type="text" name="picture" onChange={handleChange} value={formData.picture} placeholder="Image URL" /><br></br>
           <input type="number" name="product_id" step="1" onChange={handleChange} value={formData.product_id} placeholder="Product" /><br></br>
           <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
-          <input type="submit" name="submit" value="Create New Review" className="submit"/>
+          <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/myreviews/${id}`}>Review Updated</Link></button></span>
         </form>
       </div>
     </div>
