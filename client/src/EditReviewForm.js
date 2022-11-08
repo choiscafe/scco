@@ -29,7 +29,6 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
 //Patch
   function onSubmit(e){
     e.preventDefault()
-    console.log('Hello')
     fetch(`/reviews/${id}`, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
@@ -41,22 +40,7 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
       }
     })
   }
-//   useEffect(() =>{
-//     onSubmit(e) {
-//     e.preventDefault()
-//     console.log('Hello')
-//     fetch(`/reviews/${id}`, {
-//       method: 'PATCH',
-//       headers: {'Content-Type': 'application/json'},
-//       body: JSON.stringify({...formData})
-//     })
-//     .then(res => {
-//       if(res.ok){
-//         res.json().then(setReviews(reviews))
-//       }
-//     })
-//   }
-// })
+
   function handleChange(event) {
     setFormData({
       ...formData,

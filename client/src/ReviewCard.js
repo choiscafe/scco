@@ -17,7 +17,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
   }, [])
 
   function handleDeleteClick() {
-    fetch(`/myreviews/${id}`, {
+    fetch(`/reviews/${id}`, {
       method: 'DELETE'
     }).then((res) => {
       if (res.ok) {
@@ -43,7 +43,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
       { user_id === currentUser.id ?
         <>
           <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
-          <span> <button className='del-btn' onClick={handleDeleteClick}><strong>Delete Review</strong></button></span> 
+          <button className='del-btn' onClick={handleDeleteClick}><strong>Delete Review</strong></button> 
         </> : null }
     </div>
   )
