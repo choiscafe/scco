@@ -95,7 +95,7 @@ function App() {
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>
-              <ProductsContainer products={products} currentUser={currentUser}/>
+              <ProductsContainer updateReview={updateReview} products={products} currentUser={currentUser}/>
             </Route>
             <Route exact path="/myreviews">
               <h1>My Reviews</h1>
