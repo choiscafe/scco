@@ -1,10 +1,10 @@
 import ReviewCard from "./ReviewCard"
 
 function MyReviewsContainer({ reviews, currentUser, handleDeleteReview }) {
-
-    let currentUserReviews = reviews.filter((review) => review.user_id === currentUser.id)
-   
-    const review = currentUserReviews.map((review) => {
+  // console.log(reviews)
+    // let currentUserReviews = reviews.filter((review) => review.user_id === currentUser.id)
+    
+    const review = currentUser.reviews?.map((review) => {
 
       return (
         <ReviewCard

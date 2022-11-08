@@ -16,6 +16,12 @@ function App() {
   const [reviews, setReviews] = useState({});
 
   useEffect(() => {
+    fetch('/reviews')
+    .then(res => res.json())
+    .then(reviews => setReviews(reviews))
+  }, [])
+
+  useEffect(() => {
     fetch("/products")
       .then(r => {
         if(r.ok){
@@ -55,7 +61,7 @@ function App() {
       review.id === updatedReview.id ? updatedReview : review
     )
     setReviews(updatedReviews)
- 
+
   }  
   return (
     <BrowserRouter>
@@ -96,7 +102,7 @@ function App() {
               <MyReviewsContainer reviews={reviews} currentUser={currentUser} handleDeleteReview={handleDeleteReview}/>
             </Route>
             <Route exact path="/myreviews/:id/edit">
-              <EditReviewForm updateReview={updateReview}/>
+              <EditReviewForm updateReview={updateReview} reviews={reviews} setReviews={setReviews} currentUser={currentUser}/>
             </Route>
           </Switch>
         }

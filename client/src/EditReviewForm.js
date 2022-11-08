@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom"
 
-function EditReviewForm({ updateReview }) {
+function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
 
+  const [errors, setErrors] = useState(false)
   const [formData, setFormData] = useState({
     score: "",
     comments: "",
@@ -13,9 +14,10 @@ function EditReviewForm({ updateReview }) {
   })
 
   const {id} = useParams()
-  
+
 //Get the review
   useEffect(() => {
+    console.log(`${id}`)
     fetch(`/reviews/${id}`)
     .then(res => {
       if(res.ok){
@@ -27,6 +29,7 @@ function EditReviewForm({ updateReview }) {
 //Patch
   function onSubmit(e){
     e.preventDefault()
+    console.log('Hello')
     fetch(`/reviews/${id}`, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
@@ -34,11 +37,26 @@ function EditReviewForm({ updateReview }) {
     })
     .then(res => {
       if(res.ok){
-        res.json().then(updateReview)
+        res.json().then(setReviews(...reviews))
       }
     })
   }
-
+//   useEffect(() =>{
+//     onSubmit(e) {
+//     e.preventDefault()
+//     console.log('Hello')
+//     fetch(`/reviews/${id}`, {
+//       method: 'PATCH',
+//       headers: {'Content-Type': 'application/json'},
+//       body: JSON.stringify({...formData})
+//     })
+//     .then(res => {
+//       if(res.ok){
+//         res.json().then(setReviews(reviews))
+//       }
+//     })
+//   }
+// })
   function handleChange(event) {
     setFormData({
       ...formData,
@@ -57,7 +75,8 @@ function EditReviewForm({ updateReview }) {
           <input type="text" name="picture" onChange={handleChange} value={formData.picture} placeholder="Image URL" /><br></br>
           <input type="number" name="product_id" step="1" onChange={handleChange} value={formData.product_id} placeholder="Product" /><br></br>
           <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
-          <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/products`}>Review Update</Link></button></span>
+          <input type="submit" name="submit" value="Update Collection" className="submit" /><Link to={`/myreviews`}></Link>
+          {/* <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/myreviews`}>Review Update</Link></button></span> */}
         </form>
       </div>
     </div>

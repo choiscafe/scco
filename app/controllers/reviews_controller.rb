@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
     if review
       review.update(review_params)
       if review.valid?
-        render json: review, status: :accepted
+        render json: review, status: :ok
       else
         render json: { errors: review.errors.full_messages }, status: :unprocessable_entity
       end
