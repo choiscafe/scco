@@ -1,7 +1,7 @@
 import ReviewCard from "./ReviewCard"
 
 function MyReviewsContainer({ reviews, currentUser, handleDeleteReview }) {
-  
+
     let currentUserReviews = reviews.filter((review) => review.user_id === currentUser.id)
    
     const review = currentUserReviews.map((review) => {
@@ -10,13 +10,14 @@ function MyReviewsContainer({ reviews, currentUser, handleDeleteReview }) {
         <ReviewCard
           key={review.id}
           review={review}
+          currentUser={currentUser}
           handleDeleteReview={handleDeleteReview}
         />  
       )
   })
 
   return (
-    <ul className="review-cards">{review}</ul>
+    <ul className="reviews-cards">{review}</ul>
   )
 }
 

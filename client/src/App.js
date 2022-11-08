@@ -10,10 +10,10 @@ import MyReviewsContainer from './MyReviewsContainer'
 
 function App() {
 
-  const [currentUser, setCurrentUser] = useState('')
+  const [currentUser, setCurrentUser] = useState({})
   const [errors, setErrors] = useState(false)
   const [products, setProducts] = useState([])
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState({});
 
   useEffect(() => {
     fetch("/products")
@@ -50,12 +50,12 @@ function App() {
        } 
       })
     })
-
   function handleDeleteReview(updatedReview){
     const updatedReviews = reviews.filter((review) => 
-      review.id ===updatedReview.id ? updatedReview : review
+      review.id === updatedReview.id ? updatedReview : review
     )
     setReviews(updatedReviews)
+ 
   }  
   return (
     <BrowserRouter>
@@ -89,7 +89,7 @@ function App() {
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>
-              <ProductsContainer products={products}/>
+              <ProductsContainer products={products} currentUser={currentUser}/>
             </Route>
             <Route exact path="/myreviews">
               <h1>My Reviews</h1>

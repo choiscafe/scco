@@ -9,12 +9,10 @@ function ProductCard({ product, currentUser, updateReview }) {
 
   const {id, name, category, brand, image, price_size, ingredients, reviews } = product
 
-  
-
   function handleClick() {
     setShowForm((showForm) => !showForm);
   }
-
+  // console.log(currentUser)
   return (
     <div className="product-card">
       <img src={image} alt={name} />
@@ -25,12 +23,11 @@ function ProductCard({ product, currentUser, updateReview }) {
       <h2>Ingredients: </h2>
         <IngredientsContainer ingredients={ingredients} />
       <h2>Reviews: </h2>
-      {!currentUser}
         {showForm ? <NewReviewForm updateReview={updateReview}/> : null}
         {!showForm ? <div className="buttonContainer">
           <button onClick={handleClick}>Add a Review</button>
         </div> : null}
-        <ReviewsContainer reviews={reviews}/>
+        <ReviewsContainer reviews={reviews} currentUser={currentUser}/>
     </div>
   )
 }

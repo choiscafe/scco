@@ -1,13 +1,20 @@
 import { Link, useHistory } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-function ReviewCard({ review, handleDeleteReview }){
+function ReviewCard({ review, currentUser, handleDeleteReview }){
 
   const [errors, setErrors] = useState()
+  const [user, setUser] = useState({})
 
   const history = useHistory()
 
-  const {id, score, comments, tips, picture, product_id, user_id, user} = review
+  const {id, score, comments, tips, picture, product_id, user_id} = review
+
+  useEffect(() => {
+    fetch(`/reviews/${id}`)
+    .then(r => r.json())
+    .then(review => setUser(review.user))
+  }, [])
 
   function handleDeleteClick() {
     fetch(`/myreviews/${id}`, {
@@ -22,18 +29,22 @@ function ReviewCard({ review, handleDeleteReview }){
     })
   }
 
-  if(errors) return <h1>{errors}</h1>
+  if (errors) return <h1>{errors}</h1>
 
   return (
     <div className="review-card">
-      <p>Score: {score}</p>
+     <p>Score: {score}</p>
       <p>Comments: {comments}</p>
       <p>Tips: {tips}</p>
       <img src={picture} alt={product_id}/>
-      <p>{user_id}</p>
-      <p>{user}</p>
-      <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
-      <span> <button className='del-btn' onClick={handleDeleteClick}><strong>Delete Review</strong></button></span>
+      <p>{user_id}</p>   
+      <p>{user.username}</p> 
+
+      { user_id === currentUser.id ?
+        <>
+          <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
+          <span> <button className='del-btn' onClick={handleDeleteClick}><strong>Delete Review</strong></button></span> 
+        </> : null }
     </div>
   )
 }

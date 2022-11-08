@@ -57,7 +57,7 @@ function EditReviewForm({ updateReview }) {
           <input type="text" name="picture" onChange={handleChange} value={formData.picture} placeholder="Image URL" /><br></br>
           <input type="number" name="product_id" step="1" onChange={handleChange} value={formData.product_id} placeholder="Product" /><br></br>
           <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
-          <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/myreviews/${id}`}>Review Updated</Link></button></span>
+          <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/products`}>Review Update</Link></button></span>
         </form>
       </div>
     </div>

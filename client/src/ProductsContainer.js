@@ -2,7 +2,7 @@ import ProductCard from './ProductCard'
 
 function ProductsContainer({ products, currentUser, updateReview }) {
   
-
+  // console.log(currentUser)
     const productsList = products.map((product) => {
 
     return (
@@ -16,7 +16,7 @@ function ProductsContainer({ products, currentUser, updateReview }) {
   })
 
   return (
-    <ul className="arts-cards">{productsList}</ul>
+    <ul className="products-cards">{productsList}</ul>
   )
 }
 
