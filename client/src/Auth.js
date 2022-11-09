@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom"
-// import styled from "styled-components"
-import Errors from './Errors'
+import { Link, useHistory } from "react-router-dom"
+import Login from './Login'
 
 function Auth({ setCurrentUser }) {
-  console.log(setCurrentUser)
+
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -27,19 +26,20 @@ function Auth({ setCurrentUser }) {
     }).then((r) => {
         if (r.ok) {
           r.json().then(setCurrentUser)
-          history.push(`/user/${user.id}`)
+          history.push(`/users/${user.id}`)
          } else {
            r.json().then((errorData) => setErrors(errorData.errors))
         }
       })
     }
-  
-  if (errors) return <Errors errors={errors} />
-  
+    // if(errors) return <h1>{errors}</h1>
+
   return (
     <div>
       <form onSubmit={onSubmit}>
         <h1>SCCO</h1>
+        <h2>Create an accout</h2>
+        <h3>Already have an account?<Link to="/login">Login</Link></h3>
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -72,7 +72,7 @@ function Auth({ setCurrentUser }) {
           </ul>
         )}
         <input type="submit" value="Sign up" />{" "}
-        <input type="submit" value="Login" onClick={() => setLogin(true)} />
+        
       </form>
     </div>
   );
