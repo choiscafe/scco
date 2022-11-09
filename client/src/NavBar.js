@@ -1,11 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 
 function NavBar({ updateUser, currentUser }){
+
+  const history = useHistory()
 
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         updateUser(null); 
+        history.push(`/`)
       }
     })
   }
