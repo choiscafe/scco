@@ -1,6 +1,6 @@
 import ProductCard from './ProductCard'
 
-function ProductsContainer({ products, currentUser, updateReview }) {
+function ProductsContainer({ products, currentUser, addReview }) {
   
   // console.log(currentUser)
     const productsList = products.map((product) => {
@@ -10,7 +10,7 @@ function ProductsContainer({ products, currentUser, updateReview }) {
         key={product.id}
         product={product}
         currentUser={currentUser}
-        updateReview={updateReview}
+        addReview={addReview}
       />  
     )
   })

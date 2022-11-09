@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-function NewReviewForm({ updateReview }) {
+function NewReviewForm({ addReview }) {
 
   const [formData, setFormData] = useState({
     score: "",
@@ -11,40 +11,32 @@ function NewReviewForm({ updateReview }) {
     product_id: "",
     user_id: ""
   })
+  
+  const [errors, setErrors] = useState([])
 
   const history = useHistory()
 
-  function handleChange(event) {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
   }
-
+  
   function handleSubmit(e){
     e.preventDefault()
-    
-    const newReview = {...formData}
-
     fetch('/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(newReview),
+      body: JSON.stringify({...formData})
     })
-    .then((r) => r.json())
-    .then((newReview) => {
-      setFormData({
-        score: "",
-        comments: "",
-        tips: "",
-        picture: "",
-        product_id: "",
-        user_id: ""
-      })
-      updateReview(newReview)
-      history.push('/')
+    .then((r) => {
+      if(r.ok){
+        r.json().then(addReview) 
+        } else {
+          //Display errors
+          r.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
+        }
     })
   }
 
@@ -60,6 +52,7 @@ function NewReviewForm({ updateReview }) {
         <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
         <input type="submit" name="submit" value="Create New Review" className="submit"/>
       </form>
+      {errors?errors.map(e => <h2 style={{color:'red'}}>{e.toUpperCase()}</h2>):null}
     </div>
   );
 }

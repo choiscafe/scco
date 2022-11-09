@@ -45,6 +45,8 @@ function App() {
   
   const updateUser = (user) => setCurrentUser(user)
 
+  const addReview = (review) => setReviews(current => [...current, review])
+
   const updateReview = (updatedReview) => setReviews(current => {
     return current.map(review => {
       if(review.id === updatedReview.id){
@@ -87,7 +89,7 @@ function App() {
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>
-              <ProductsContainer updateReview={updateReview} products={products} currentUser={currentUser}/>
+              <ProductsContainer addReview={addReview} products={products} currentUser={currentUser}/>
             </Route>
             <Route exact path="/myreviews">
               <h1>My Reviews</h1>

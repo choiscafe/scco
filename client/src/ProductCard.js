@@ -3,7 +3,7 @@ import ReviewsContainer from './ReviewsContainer'
 import NewReviewForm from './NewReviewForm'
 import { useState } from "react";
 
-function ProductCard({ product, currentUser, updateReview }) {
+function ProductCard({ product, currentUser, addReview }) {
 
   const [showForm, setShowForm] = useState(false);
 
@@ -23,7 +23,7 @@ function ProductCard({ product, currentUser, updateReview }) {
       <h2>Ingredients: </h2>
         <IngredientsContainer ingredients={ingredients} />
       <h2>Reviews: </h2>
-        {showForm ? <NewReviewForm updateReview={updateReview}/> : null}
+        {showForm ? <NewReviewForm addReview={addReview}/> : null}
         {!showForm ? <div className="buttonContainer">
           <button onClick={handleClick}>Add a Review</button>
         </div> : null}
