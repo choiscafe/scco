@@ -38,9 +38,7 @@ function App() {
     fetch("/me")
     .then(r => {
       if (r.ok) {
-        r.json().then(user => {
-          updateUser(user)
-        });
+        r.json().then((user) => updateUser(user));
       }
     });
   }, [])
@@ -56,13 +54,10 @@ function App() {
        } 
       })
     })
-  function handleDeleteReview(updatedReview){
-    const updatedReviews = reviews.filter((review) => 
-      review.id === updatedReview.id ? updatedReview : review
-    )
-    setReviews(updatedReviews)
-  }  
 
+  const handleDeleteReview = (id) => setReviews(current => current.filter(r => r.id === id))
+
+  
   return (
     <BrowserRouter>
       <div className="App">

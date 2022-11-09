@@ -68,6 +68,7 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
               ))}
             </ul>
           )}
+          
           <input type="submit" name="submit" value="Update Collection" className="submit" /><Link to={`/myreviews`}></Link>
           {/* <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/myreviews`}>Review Update</Link></button></span> */}
         </form>

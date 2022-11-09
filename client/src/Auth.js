@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom"
-import Login from './Login'
 
 function Auth({ setCurrentUser }) {
 
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [login, setLogin] = useState([]);
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState(false)
   
   const history = useHistory()
 
@@ -26,14 +24,14 @@ function Auth({ setCurrentUser }) {
     }).then((r) => {
         if (r.ok) {
           r.json().then(setCurrentUser)
+          alert("Account created")
           history.push(`/users/${user.id}`)
          } else {
            r.json().then((errorData) => setErrors(errorData.errors))
         }
       })
+
     }
-    console.log(errors)
-    // if(errors) return <h1>{errors}</h1>
 
   return (
     <div>
@@ -67,6 +65,7 @@ function Auth({ setCurrentUser }) {
         />{" "}
         {errors.length > 0 && (
           <ul style={{ color: "red" }}>
+            
             {errors.map((error) => (
               <li key={error}>{error}</li>
             ))}
