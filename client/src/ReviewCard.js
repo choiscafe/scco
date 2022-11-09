@@ -22,7 +22,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
     }).then((res) => {
       if (res.ok) {
         handleDeleteReview(id)
-        history.push('/')
+        history.push('/products')
       } else {
         res.json().then(data => setErrors(data.errors))
       }
@@ -37,7 +37,6 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
       <img src={picture} alt={product_id}/>
       <p>{user_id}</p>   
       <p>{user.username}</p> 
-
       { user_id === currentUser.id ?
         <>
           <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
