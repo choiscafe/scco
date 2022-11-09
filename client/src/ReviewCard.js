@@ -1,5 +1,7 @@
 import { Link, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+// import styled from "styled-components"
+// import Errors from './Errors'
 
 function ReviewCard({ review, currentUser, handleDeleteReview }){
 
@@ -29,7 +31,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
     })
   }
 
-  if (errors) return <h1>{errors}</h1>
+  // if (errors) return <Errors errors={errors} />
 
   return (
     <div className="review-card">
