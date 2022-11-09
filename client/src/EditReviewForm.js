@@ -36,7 +36,7 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
     })
     .then(res => {
       if(res.ok){
-        res.json().then(setReviews(...reviews))
+        res.json().then((review) => console.log([...reviews, review]))
       }else {
         res.json().then((errorData) => setErrors(errorData.errors));
       }

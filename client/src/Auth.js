@@ -32,13 +32,14 @@ function Auth({ setCurrentUser }) {
         }
       })
     }
+    console.log(errors)
     // if(errors) return <h1>{errors}</h1>
 
   return (
     <div>
       <form onSubmit={onSubmit}>
         <h1>SCCO</h1>
-        <h2>Create an accout</h2>
+        <h2>Create an account</h2>
         <h3>Already have an account?<Link to="/login">Login</Link></h3>
         <label htmlFor="name">Name:</label>
         <input
