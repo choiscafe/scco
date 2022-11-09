@@ -33,6 +33,7 @@ function NewReviewForm({ addReview }) {
     .then((r) => {
       if(r.ok){
         r.json().then(addReview) 
+        setErrors([])
         } else {
           //Display errors
           r.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
