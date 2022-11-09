@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom"
+// import styled from "styled-components"
+import Errors from './Errors'
 
 function Auth({ setCurrentUser }) {
+  console.log(setCurrentUser)
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [login, setLogin] = useState("");
+  const [login, setLogin] = useState([]);
   const [errors, setErrors] = useState([])
   
   const history = useHistory()
 
   function onSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     const user = {
       name,
       username,
@@ -21,18 +24,18 @@ function Auth({ setCurrentUser }) {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(user)
-    })
-    .then((r) => {
+    }).then((r) => {
         if (r.ok) {
           r.json().then(setCurrentUser)
           history.push(`/user/${user.id}`)
          } else {
-           r.json().then( e => setErrors(Object.entries(e.error).flat()))
-           console.log('hi')
+           r.json().then((errorData) => setErrors(errorData.errors))
         }
       })
     }
-
+  
+  if (errors) return <Errors errors={errors} />
+  
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -61,7 +64,13 @@ function Auth({ setCurrentUser }) {
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
         />{" "}
-      
+        {errors.length > 0 && (
+          <ul style={{ color: "red" }}>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        )}
         <input type="submit" value="Sign up" />{" "}
         <input type="submit" value="Login" onClick={() => setLogin(true)} />
       </form>

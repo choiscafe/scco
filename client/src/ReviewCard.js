@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 
 function ReviewCard({ review, currentUser, handleDeleteReview }){
 
-  const [errors, setErrors] = useState()
+  const [errors, setErrors] = useState([])
   const [user, setUser] = useState({})
 
   const history = useHistory()

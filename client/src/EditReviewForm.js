@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom"
 
 function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
 
-  const [errors, setErrors] = useState(false)
+  const [errors, setErrors] = useState([])
   const [formData, setFormData] = useState({
     score: "",
     comments: "",
@@ -37,6 +37,8 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
     .then(res => {
       if(res.ok){
         res.json().then(setReviews(...reviews))
+      }else {
+        res.json().then((errorData) => setErrors(errorData.errors));
       }
     })
   }
@@ -59,6 +61,13 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
           <input type="text" name="picture" onChange={handleChange} value={formData.picture} placeholder="Image URL" /><br></br>
           <input type="number" name="product_id" step="1" onChange={handleChange} value={formData.product_id} placeholder="Product" /><br></br>
           <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
+          {errors.length > 0 && (
+            <ul style={{ color: "red" }}>
+              {errors.map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          )}
           <input type="submit" name="submit" value="Update Collection" className="submit" /><Link to={`/myreviews`}></Link>
           {/* <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/myreviews`}>Review Update</Link></button></span> */}
         </form>

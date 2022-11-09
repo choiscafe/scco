@@ -61,8 +61,8 @@ function App() {
       review.id === updatedReview.id ? updatedReview : review
     )
     setReviews(updatedReviews)
-
   }  
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -82,10 +82,7 @@ function App() {
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>
-              <ProductsContainer
-                products={products}
-                currentUser={currentUser}
-              />
+              <ProductsContainer products={products} currentUser={currentUser} />
             </Route>
           </Switch> :
           <Switch>
