@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useHistory } from "react-router-dom"
 
 function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
 
@@ -14,10 +14,9 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
   })
 
   const {id} = useParams()
-
+  const history = useHistory()
 //Get the review
   useEffect(() => {
-    console.log(`${id}`)
     fetch(`/reviews/${id}`)
     .then(res => {
       if(res.ok){
@@ -37,6 +36,8 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
     .then(res => {
       if(res.ok){
         res.json().then((review) => console.log([...reviews, review]))
+        alert('Your review is updated successfully')
+        history.push(`/myreviews`)
       }else {
         res.json().then((errorData) => setErrors(errorData.errors));
       }

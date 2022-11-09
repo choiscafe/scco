@@ -12,7 +12,7 @@ function ProductCard({ product, currentUser, addReview }) {
   function handleClick() {
     setShowForm((showForm) => !showForm);
   }
-  // console.log(currentUser)
+ 
   return (
     <div className="product-card">
       <img src={image} alt={name} />

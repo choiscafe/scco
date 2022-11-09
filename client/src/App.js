@@ -74,8 +74,9 @@ function App() {
               <Auth setCurrentUser={setCurrentUser} />
             </Route>
             <Route exact path="/">
-              <h1>Hello, Welcome to SCCO</h1>
+              <h1>Hello, welcome to SCCO</h1>
               <h2>Know your skin food</h2>
+              <h3>Clean & soft Skincare</h3>
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>
@@ -86,6 +87,7 @@ function App() {
             <Route exact path="/">
               <h1>Welcome to SCCO</h1>
               <h2>Welcome, {currentUser.username}!</h2>
+              <h3>Clean & soft Skincare</h3>
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>

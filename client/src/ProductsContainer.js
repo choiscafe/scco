@@ -2,7 +2,6 @@ import ProductCard from './ProductCard'
 
 function ProductsContainer({ products, currentUser, addReview }) {
   
-  // console.log(currentUser)
     const productsList = products.map((product) => {
 
     return (
