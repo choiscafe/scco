@@ -24,13 +24,13 @@ function Auth({ setCurrentUser }) {
     }).then((r) => {
         if (r.ok) {
           r.json().then(setCurrentUser)
+          setErrors([])
           alert("Account created")
           history.push(`/users/${user.id}`)
          } else {
            r.json().then((errorData) => setErrors(Object.entries(errorData.errors).map(e => `${e[0]} ${e[1]}`)))
         }
       })
-
     }
 
   return (
@@ -63,16 +63,14 @@ function Auth({ setCurrentUser }) {
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
         />{" "}
+        <input type="submit" value="Sign up" />{" "}
         {errors.length > 0 && (
           <ul style={{ color: "red" }}>
-            
             {errors.map((error) => (
               <li key={error}>{error}</li>
             ))}
           </ul>
         )}
-        <input type="submit" value="Sign up" />{" "}
-        
       </form>
     </div>
   );
