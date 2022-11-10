@@ -12,10 +12,10 @@ function Login({ updateUser }) {
         <>
           <LoginForm updateUser={updateUser} />
           <p>
-            Don't have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(false)}>
-            <Link to="/signup">Sign Up</Link>
-            </button>
+            Need an account? &nbsp;
+            {/* <button color="secondary" onClick={() => setShowLogin(false)}> */}
+            <Link to="/signup">Create one</Link>
+            {/* </button> */}
           </p>
         </>
       ) : (

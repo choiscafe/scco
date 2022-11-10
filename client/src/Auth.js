@@ -6,7 +6,7 @@ function Auth({ setCurrentUser }) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState(false)
+  const [errors, setErrors] = useState([])
   
   const history = useHistory()
 
@@ -27,7 +27,7 @@ function Auth({ setCurrentUser }) {
           alert("Account created")
           history.push(`/users/${user.id}`)
          } else {
-           r.json().then((errorData) => setErrors(errorData.errors))
+           r.json().then((errorData) => setErrors(Object.entries(errorData.errors).map(e => `${e[0]} ${e[1]}`)))
         }
       })
 
