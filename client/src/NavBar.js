@@ -27,16 +27,17 @@ function NavBar({ updateUser, currentUser }){
       <NavLink to="/">Hair</NavLink>{" "}
       <NavLink to="/">Nail</NavLink>{" "}
       <NavLink to="/">Perfume</NavLink>{" "}
-      <NavLink to="/myreviews">My Reviews</NavLink>{" "}
-      {currentUser? (
-        <header>
-          <p>Welcome, {currentUser.username}!</p>
-          <button onClick={handleLogoutClick}>Logout</button>
-        </header>
+      
+      {!currentUser? (
+          <>
+            <NavLink to="/signup">Signup</NavLink>{" "}
+            <NavLink to="/login">Login</NavLink>
+          </>
       ) : (
         <>
-          <NavLink to="/signup">Signup</NavLink>{" "}
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/myreviews">My Reviews</NavLink>{" "}
+          <p>Welcome, {currentUser.username}!</p>
+          <button onClick={handleLogoutClick}>Sign out</button>
         </>
       )}
     </div>

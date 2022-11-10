@@ -25,7 +25,7 @@ function Auth({ setCurrentUser }) {
         if (r.ok) {
           r.json().then(setCurrentUser)
           setErrors([])
-          alert("Account created")
+          alert("Your account is now created!")
           history.push(`/users/${user.id}`)
          } else {
            r.json().then((errorData) => setErrors(Object.entries(errorData.errors).map(e => `${e[0]} ${e[1]}`)))

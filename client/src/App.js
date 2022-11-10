@@ -10,7 +10,7 @@ import MyReviewsContainer from './MyReviewsContainer'
 
 function App() {
 
-  const [currentUser, setCurrentUser] = useState({})
+  const [currentUser, setCurrentUser] = useState(false)
   const [errors, setErrors] = useState(false)
   const [products, setProducts] = useState([])
   const [reviews, setReviews] = useState({});
@@ -33,7 +33,7 @@ function App() {
   }, [])
 
   const showProducts = (productslist) => setProducts(productslist)
-  
+  const updateUser = (user) => setCurrentUser(user)
   useEffect(() => {
     fetch("/me")
     .then(r => {
@@ -43,7 +43,7 @@ function App() {
     });
   }, [])
   
-  const updateUser = (user) => setCurrentUser(user)
+  
 
   const addReview = (review) => setReviews(current => [...current, review])
 
