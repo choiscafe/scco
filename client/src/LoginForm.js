@@ -26,7 +26,7 @@ function LoginForm({ updateUser }) {
           history.push(`/users/${user.id}`)
       })
      } else {
-        r.json().then((errorData) => setErrors(errorData.errors));
+        r.json().then((errorData) => setErrors(Object.entries(errorData.errors).map(e=> `${e[0]} ${e[1]}`)));
       }
     })
   }
@@ -51,6 +51,7 @@ function LoginForm({ updateUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />{" "}
+        <button type="submit">SIGN IN</button>
         {errors.length > 0 && (
           <ul style={{ color: "red" }}>
             
@@ -59,7 +60,7 @@ function LoginForm({ updateUser }) {
             ))}
           </ul>
         )}
-        <button type="submit">SIGN IN</button>
+        
       </form>
     </div>
   );
