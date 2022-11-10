@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 import LoginForm from "./LoginForm";
 
 
@@ -13,7 +14,7 @@ function Login({ updateUser }) {
           <p>
             Don't have an account? &nbsp;
             <button color="secondary" onClick={() => setShowLogin(false)}>
-              Sign Up
+            <Link to="/signup">Sign Up</Link>
             </button>
           </p>
         </>
