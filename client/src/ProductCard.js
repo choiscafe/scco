@@ -1,7 +1,8 @@
+import { useState } from "react";
 import IngredientsContainer from './IngredientsContainer'
 import ReviewsContainer from './ReviewsContainer'
 import NewReviewForm from './NewReviewForm'
-import { useState } from "react";
+import BarChart from "./components/BarChart";
 
 function ProductCard({ product, currentUser, addReview }) {
 
@@ -20,8 +21,11 @@ function ProductCard({ product, currentUser, addReview }) {
       <p>{category}</p>
       <p>{brand}</p>
       <p>{price_size}</p>
-      <h2>Ingredients: </h2>
+      <h2>Ingredient: </h2>
+      <>
+        <BarChart />
         <IngredientsContainer ingredients={ingredients} />
+      </>
       <h2>Reviews: </h2>
         {showForm ? <NewReviewForm addReview={addReview}/> : null}
         {!showForm ? <div className="buttonContainer">

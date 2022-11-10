@@ -8,6 +8,7 @@ import ProductsContainer from './ProductsContainer'
 import EditReviewForm from './EditReviewForm'
 import MyReviewsContainer from './MyReviewsContainer'
 
+
 function App() {
 
   const [currentUser, setCurrentUser] = useState(false)
@@ -62,6 +63,7 @@ function App() {
   
   return (
     <BrowserRouter>
+    {/* <UseContext.Provider> */}
       <div className="App">
         <Counter />
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
@@ -103,6 +105,7 @@ function App() {
           </Switch>
         }
       </div>
+      {/* </UseContext.Provider> */}
     </BrowserRouter>
   );
 }

@@ -1,4 +1,5 @@
 function IngredientCard({ ingredient }){
+  
   const {id, name, ewg_rating, toxic, irritant, skin_type, functional} = ingredient
   
   return (
