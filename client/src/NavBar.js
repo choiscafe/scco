@@ -7,7 +7,7 @@ function NavBar({ updateUser, currentUser }){
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
-        updateUser(null); 
+        updateUser(false); 
         history.push(`/`)
       }
     })
