@@ -2,7 +2,7 @@ import { useState } from "react";
 import IngredientsContainer from './IngredientsContainer'
 import ReviewsContainer from './ReviewsContainer'
 import NewReviewForm from './NewReviewForm'
-import BarChart from "./components/BarChart";
+import BarChart from './components/BarChart'
 
 function ProductCard({ product, currentUser, addReview }) {
 
