@@ -21,6 +21,7 @@ ChartJS.register(
   Legend
 );
 const options = {
+  indexAxis: 'y',
   plugins: {
     title: {
       display: true,
@@ -37,7 +38,7 @@ const options = {
     },
   },
 };
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['January'];
 const data = {
   labels,
   datasets: [
