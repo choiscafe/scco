@@ -21,41 +21,68 @@ ChartJS.register(
   Legend
 );
 const options = {
+  aspectRatio: 5,
   indexAxis: 'y',
+  borderSkipped: false,
+  barPercentage: 0.3,
   plugins: {
+          //top title
     title: {
       display: true,
-      text: 'Chart.js Bar Chart - Stacked',
+      text: 'Total Ingredient',
     },
   },
   responsive: true,
   scales: {
     x: {
       stacked: true,
+      grid: {
+        display: false,
+        drawBorder: false,
+        drawTicks: false
+      },
+      ticks: {
+        display: false
+      }
     },
     y: {
+      beginAtZero: true,
       stacked: true,
+      grid: {
+        display: false,
+        drawBorder: false,
+        drawTicks: false
+      },
+      ticks: {
+        display: false
+      }
     },
   },
 };
-const labels = ['January'];
+//side label
+const labels = [''];
 const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      backgroundColor: 'rgb(255, 99, 132)',
+      label: '1-2 Low risk',
+      data: [9],
+      backgroundColor: '#40BDCF',
     },
     {
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      backgroundColor: 'rgb(75, 192, 192)',
+      label: '3-6 Middle risk',
+      data: [2],
+      backgroundColor: '#FDBE23',
     },
     {
-      label: 'Dataset 3',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      backgroundColor: 'rgb(53, 162, 235)',
+      label: '7-10 High risk',
+      data: [0],
+      backgroundColor: '#F46954',
+    },
+    {
+      label: 'N/A',
+      data: [0],
+      backgroundColor: '#DDDDDD',
     },
   ],
 };
