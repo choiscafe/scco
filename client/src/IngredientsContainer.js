@@ -1,5 +1,5 @@
 import IngredientCard from './IngredientCard'
-// import BarChart from "./components/BarChart";
+
 function IngredientsContainer({ ingredients }){
   
   const ingredientlist = ingredients.map((ingredient) => {

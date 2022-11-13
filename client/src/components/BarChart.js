@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { Bar } from 'react-chartjs-2'
-import faker from 'faker';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -61,12 +59,22 @@ const options = {
 };
 //side label
 const labels = [''];
+// const ingredients = ingredients.all
+// const d1 = product.ingredients.filter(function(item){
+//   if (item.ewg_rating <= 2 ) {
+//     return d1.count();
+//   } else {
+//     return false;
+//   }
+// });
 const data = {
   labels,
   datasets: [
     {
       label: '1-2 Low risk',
-      data: [9],
+      data: 
+      [9],
+      // d1,
       backgroundColor: '#40BDCF',
     },
     {
@@ -87,12 +95,13 @@ const data = {
   ],
 };
 
-function BarChart(){
+function BarChart({ product }){
   return (
     <div>
       <Bar
         options={options}
         data={data}
+       
   />
     </div>
   )

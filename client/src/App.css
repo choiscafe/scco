@@ -14,18 +14,44 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  width: 1280px;
+  height: 32px;
+  left: 0px;
+  top: 83px;
+  background: #5EDFDF;
+}
+
+.active {
+  /* position: absolute; */
+  width: 22px;
+  height: 13px;
+  left: 255px;
+  top: 92px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 13px; 
+/* identical to box height */
+  color: #000000; 
 }
 
 .App-link {
   color: #61dafb;
+}
+.product-card img{
+height: 309px;
+left: 315px;
+top: 179px;
+}
+
+.product-card {
+  /* position: absolute; */
+  margin: 1rem;
+  /* identical to box height */
+  color: #000000;
 }
 
 @keyframes App-logo-spin {

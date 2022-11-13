@@ -1,4 +1,5 @@
 import { NavLink, useHistory } from 'react-router-dom'
+import "./App.css";
 
 function NavBar({ updateUser, currentUser }){
 
@@ -15,23 +16,23 @@ function NavBar({ updateUser, currentUser }){
 
   return(
     <div className="App-header">
-      <NavLink to="/products">Products</NavLink>{" "}
-      <NavLink to="/">Skincare</NavLink>{" "}
-      <NavLink to="/">Cleansing/Peeling</NavLink>{" "}
-      <NavLink to="/">Mask</NavLink>{" "}
-      <NavLink to="/">Suncare</NavLink>{" "}
-      <NavLink to="/">Base Makeup</NavLink>{" "}
-      <NavLink to="/">Eye Makeup</NavLink>{" "}
-      <NavLink to="/">Lip Makeup</NavLink>{" "}
-      <NavLink to="/">Body</NavLink>{" "}
-      <NavLink to="/">Hair</NavLink>{" "}
-      <NavLink to="/">Nail</NavLink>{" "}
-      <NavLink to="/">Perfume</NavLink>{" "}
+      <NavLink activeClassName='active' to="/products">Products</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Skincare</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Cleansing/Peeling</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Mask</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Suncare</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Base Makeup</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Eye Makeup</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Lip Makeup</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Body</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Hair</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Nail</NavLink>{" "}
+      <NavLink activeClassName='active' to="/">Perfume</NavLink>{" "}
       
       {!currentUser? (
           <>
             <NavLink to="/signup">Signup</NavLink>{" "}
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/login">Sign in</NavLink>
           </>
       ) : (
         <>
@@ -45,3 +46,4 @@ function NavBar({ updateUser, currentUser }){
 }
 
 export default NavBar
+

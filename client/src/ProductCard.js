@@ -17,19 +17,19 @@ function ProductCard({ product, currentUser, addReview }) {
   return (
     <div className="product-card">
       <img src={image} alt={name} />
+      <p>{brand}</p>
       <h4>{name}</h4>
       <p>{category}</p>
-      <p>{brand}</p>
       <p>{price_size}</p>
       <h2>Ingredient: </h2>
       <>
         <BarChart />
         <IngredientsContainer ingredients={ingredients} />
       </>
-      <h2>Reviews: </h2>
+      <h2>Rating & Reviews</h2>
         {showForm ? <NewReviewForm addReview={addReview}/> : null}
         {!showForm ? <div className="buttonContainer">
-          <button onClick={handleClick}>Add a Review</button>
+          <button onClick={handleClick}>Write a Review</button>
         </div> : null}
         <ReviewsContainer reviews={reviews} currentUser={currentUser}/>
     </div>
