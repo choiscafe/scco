@@ -59,19 +59,25 @@ const options = {
 };
 //side label
 const labels = [''];
-// const counter = ingredients.all
-// const counter = 0
-
-
-
-
 
 function BarChart({ product }){
   const d1 = product.ingredients.filter(function(item){
     return item.ewg_rating <= 2  
   });
+
+  const d2 = product.ingredients.filter(function(item){
+    return (item.ewg_rating >= 3 && item.ewg_rating <= 6)
+  });
+
+  const d3 = product.ingredients.filter(function(item){
+    return item.ewg_rating >= 7
+  });
   
-  console.log(d1.length)
+  const d4 = product.ingredients.filter(function(item){
+    return item.ewg_rating === "N/A"
+  });
+
+  console.log(d2)
 
   const data = {
     labels,
@@ -79,23 +85,25 @@ function BarChart({ product }){
       {
         label: '1-2 Low risk',
         data: 
-        // [9],
         [d1.length],
         backgroundColor: '#40BDCF'
       },
       {
         label: '3-6 Middle risk',
-        data: [2],
+        data: 
+        [d2.length],
         backgroundColor: '#FDBE23',
       },
       {
         label: '7-10 High risk',
-        data: [0],
+        data: 
+        [d3.length],
         backgroundColor: '#F46954',
       },
       {
         label: 'N/A',
-        data: [0],
+        data: 
+        [d4.length],
         backgroundColor: '#DDDDDD',
       },
     ],
