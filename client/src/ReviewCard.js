@@ -1,15 +1,28 @@
 import { Link, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import RatingIcon from './RatingIcon'
 
 function ReviewCard({ review, currentUser, handleDeleteReview }){
 
   const [errors, setErrors] = useState([])
   const [user, setUser] = useState({})
+  const [rating, setRating] = useState(0)
+  const [hoverRating, setHoverRating] = useState(0);
 
   const history = useHistory()
 
   const {id, score, comments, tips, picture, product_id, user_id} = review
 
+  // const onMouseEnter = (index) => {
+  //   setHoverRating(index);
+  // };
+  // const onMouseLeave = () => {
+  //   setHoverRating(0);
+  // };
+  const onSaveRating = (index) => {
+    setRating(index);
+  };
+  
   useEffect(() => {
     fetch(`/reviews/${id}`)
     .then(r => r.json())
@@ -31,12 +44,24 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
 
   return (
     <div className="review-card">
-     <p>Score: {score}</p>
+      <p>{user.username}</p> 
+      <p>{[1, 2, 3, 4, 5].map((index) => {
+        return (
+          <RatingIcon 
+            key={index.id}
+            index={index} 
+            rating={score} 
+            hoverRating={hoverRating} 
+            // onMouseEnter={onMouseEnter} 
+            // onMouseLeave={onMouseLeave} 
+            onSaveRating={onSaveRating} />
+        )
+      })}</p>
       <p>Comments: {comments}</p>
       <p>Tips: {tips}</p>
       <img src={picture} alt={product_id}/>
       <p>{user_id}</p>   
-      <p>{user.username}</p> 
+      
       { user_id === currentUser.id ?
         <>
           <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
@@ -46,3 +71,4 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
   )
 }
 export default ReviewCard
+

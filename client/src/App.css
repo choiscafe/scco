@@ -75,6 +75,14 @@ top: 179px;
   color: #000000;
 }
 
+.w-6{
+  background-position: -2px -42px;
+  background-size: 512px 512px;
+  background-repeat: no-repeat;
+  height: 18px;
+    width: 80px;
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

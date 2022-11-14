@@ -16,6 +16,8 @@ function NavBar({ updateUser, currentUser }){
 
   return(
     <div className="App-header">
+    
+      
       <NavLink activeClassName='active' to="/products">Products</NavLink>{" "}
       <NavLink activeClassName='active' to="/">Skincare</NavLink>{" "}
       <NavLink activeClassName='active' to="/">Cleansing/Peeling</NavLink>{" "}
@@ -33,6 +35,7 @@ function NavBar({ updateUser, currentUser }){
           <>
             <NavLink activeClassName='active' to="/signup">Signup</NavLink>{" "}
             <NavLink activeClassName='active' to="/login">Sign in</NavLink>
+            
           </>
       ) : (
         <>
