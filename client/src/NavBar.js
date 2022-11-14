@@ -31,12 +31,12 @@ function NavBar({ updateUser, currentUser }){
       
       {!currentUser? (
           <>
-            <NavLink to="/signup">Signup</NavLink>{" "}
-            <NavLink to="/login">Sign in</NavLink>
+            <NavLink activeClassName='active' to="/signup">Signup</NavLink>{" "}
+            <NavLink activeClassName='active' to="/login">Sign in</NavLink>
           </>
       ) : (
         <>
-          <NavLink to="/myreviews">My Reviews</NavLink>{" "}
+          <NavLink activeClassName='active' to="/myreviews">My Reviews</NavLink>{" "}
           <p>Welcome, {currentUser.username}!</p>
           <button onClick={handleLogoutClick}>Sign out</button>
         </>

@@ -23,7 +23,7 @@ function ProductCard({ product, currentUser, addReview }) {
       <p>{price_size}</p>
       <h2>Ingredient: </h2>
       <>
-        <BarChart />
+        <BarChart product={product}/>
         <IngredientsContainer ingredients={ingredients} />
       </>
       <h2>Rating & Reviews</h2>
