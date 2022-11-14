@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create(name: "Cho", username: "Cho", password: "Cho")
-User.create(name: "Rafia", username: "Rafia", password: "Rafia")
+User.create(username: "Cho", email: "cho@gmail.com", password: "Cho", admin: true)
+User.create(username: "Rafia", email: "rafia@gmail.com", password: "Rafia", admin: false)
 Product.create(name: "Calm + Restore Triple Oat Hydrating Face Serum for Sensitive Skin", category: "Serum", brand: "Aveeno", image: "https://m.media-amazon.com/images/I/71uEPq-7ivL._SL1500_.jpg", price_size: "$19.67/1 fl. oz")
 Product.create(name: "Snail Mucin 92% Repair Cream", category: "Moisturizer", brand: "COSRX", image: "https://m.media-amazon.com/images/I/7135DSnMj+L._SL1500_.jpg", price_size: "$22.73/3.52 oz, 100g")
 Review.create(score: 4, comments: "I have very sensitive dry skin and i absolutely love this there’s really isn’t a sent to it just smells like oats which i like.", tips: "The product is very suitable for sensitive skin", picture: "https://myskincareregimehome.files.wordpress.com/2022/06/wp-1656361796370.jpg", product_id: 1, user_id: 1)

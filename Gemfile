@@ -34,6 +34,11 @@ gem "bootsnap", require: false
 
 #faker 
 gem "faker"
+
+#rails_admin
+gem "rails_admin"
+
+gem "sprockets", "~> 3.0"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -53,3 +58,4 @@ end
 
 
 gem "active_model_serializers", "~> 0.10.13"
+gem "sassc-rails"

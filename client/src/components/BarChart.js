@@ -77,8 +77,6 @@ function BarChart({ product }){
     return item.ewg_rating === "N/A"
   });
 
-  console.log(d2)
-
   const data = {
     labels,
     datasets: [
