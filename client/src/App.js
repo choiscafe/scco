@@ -1,6 +1,6 @@
 // import { Counter } from './features/counter/Counter'
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, NavLink, Link } from "react-router-dom";
 import Login from './Login'
 import Auth from './Auth'
 import NavBar from './NavBar';
@@ -78,8 +78,11 @@ function App() {
       <div className="App">
         {/* <Counter /> */}
         <div className="Topbar">
-          <img src="SCCO.png" className="logo" alt="logo"/>
+          <Link to={`/`}><img src="SCCO.png" className="logo" alt="logo" /></Link>
           <Search search={filterSearch}/>
+          <img src="login.png" className="login" alt="login"/>
+          <NavLink className='signin' to="/login">Sign in</NavLink>
+          
         </div>
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
         {!currentUser ? 

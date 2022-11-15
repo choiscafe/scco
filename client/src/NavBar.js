@@ -16,34 +16,33 @@ function NavBar({ updateUser, currentUser }){
 
   return(
     <div className="App-header">
-    
-      
-      <NavLink activeClassName='active' to="/products">Products</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Skincare</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Cleansing/Peeling</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Mask</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Suncare</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Base Makeup</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Eye Makeup</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Lip Makeup</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Body</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Hair</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Nail</NavLink>{" "}
-      <NavLink activeClassName='active' to="/">Perfume</NavLink>{" "}
-      
-      {!currentUser? (
+      <li className="Menu">
+        <NavLink activeClassName='active' to="products">Skincare</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Cleansing/Peeling</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Mask</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Suncare</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Base Makeup</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Eye Makeup</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Lip Makeup</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Body</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Hair</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Nail</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Perfume</NavLink>{" "}
+        
+        {!currentUser? (
+            <>
+              <NavLink activeClassName='active' to="/signup">Signup</NavLink>{" "}
+              {/* <NavLink activeClassName='active' to="/login">Sign in</NavLink> */}
+              
+            </>
+        ) : (
           <>
-            <NavLink activeClassName='active' to="/signup">Signup</NavLink>{" "}
-            <NavLink activeClassName='active' to="/login">Sign in</NavLink>
-            
+            <NavLink activeClassName='active' to="/myreviews">My Reviews</NavLink>{" "}
+            <p>Welcome, {currentUser.username}!</p>
+            <button onClick={handleLogoutClick}>Sign out</button>
           </>
-      ) : (
-        <>
-          <NavLink activeClassName='active' to="/myreviews">My Reviews</NavLink>{" "}
-          <p>Welcome, {currentUser.username}!</p>
-          <button onClick={handleLogoutClick}>Sign out</button>
-        </>
-      )}
+        )}
+      </li>
     </div>
   )
 }

@@ -8,11 +8,10 @@ function Search({ search }) {
 
   return (
     <div className="searchbar">
-      <label htmlFor="search">Search bar:</label>
       <input
         type="text"
         id="search"
-        placeholder="Type a name to search..."
+        placeholder="Products / Categories / Brands                                                        🔍"
         onChange={handleSearch}
       />
     </div>
