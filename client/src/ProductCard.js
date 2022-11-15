@@ -16,6 +16,7 @@ function ProductCard({ product, currentUser, addReview }) {
  
   return (
     <div className="product-card">
+      <p>Avarage Review: {product.averageScore}</p>
       <img src={image} alt={name} />
       <p>{brand}</p>
       <h4>{name}</h4>

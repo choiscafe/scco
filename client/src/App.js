@@ -44,6 +44,21 @@ function App() {
       }
     });
   }, [])
+
+  const scoresArray = products.map((a)=> a.reviews.map((b)=> b.score))
+  const averageScores= scoresArray.map((a)=>reviewAverage(a))
+  for(let i= 0; i<averageScores.length; i++){
+    // Push avarage score inside products array
+    products[i].averageScore = averageScores[i]
+  }
+ 
+  function reviewAverage(array){
+    let total = 0;
+    for(let i = 0; i < array.length; i++) {
+      total += parseInt(array[i]);
+    }
+    return total = total/array.length
+  }
   
   const addReview = (review) => setReviews(current => [...current, review])
 
@@ -82,7 +97,6 @@ function App() {
           <Search search={filterSearch}/>
           <img src="login.png" className="login" alt="login"/>
           <NavLink className='signin' to="/login">Sign in</NavLink>
-          
         </div>
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
         {!currentUser ? 

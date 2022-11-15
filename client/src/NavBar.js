@@ -18,7 +18,7 @@ function NavBar({ updateUser, currentUser }){
     <div className="App-header">
       <li className="Menu">
         <NavLink activeClassName='active' to="products">Skincare</NavLink>{" "}
-        <NavLink activeClassName='active' to="/">Cleansing/Peeling</NavLink>{" "}
+        <NavLink activeClassName='active' to="/">Cleansing</NavLink>{" "}
         <NavLink activeClassName='active' to="/">Mask</NavLink>{" "}
         <NavLink activeClassName='active' to="/">Suncare</NavLink>{" "}
         <NavLink activeClassName='active' to="/">Base Makeup</NavLink>{" "}

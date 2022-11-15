@@ -13,12 +13,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
 
   const {id, score, comments, tips, picture, product_id, user_id} = review
 
-  // const onMouseEnter = (index) => {
-  //   setHoverRating(index);
-  // };
-  // const onMouseLeave = () => {
-  //   setHoverRating(0);
-  // };
+ 
   const onSaveRating = (index) => {
     setRating(index);
   };
