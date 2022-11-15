@@ -10,12 +10,33 @@ body {
   display: flex;
   flex-direction: column;
 }
-.storefront img{
+.storefront{
+  display: block;
+  height: 604px;
+  background-image: url(https://s3-alpha-sig.figma.com/img/d9d4/43f9/aea74823f5e974463646bb382d27639e?Expires=1669593600&Signature=KUPgICOnai-xcWqEsRhPg-TcBjnJFIPAKjgcWpqkvJwYxt7YXPvkNJZ0361sG0QxnzdgFtN8CehIS5kqSbHAUXGZUJpIVHaRk62b9Qnnot1B7zaji6NiEC0Feh9G-WqAGBZmem9eh0EFYn~z5-o65pxMAMFcairKyquyXTAAvSusHeQu3oNdbMIroMQWHgCUtcZUOFAlrzx74-aE5x4pUaib6meMupmZ0BcbRSjSxF5H35zIqnOoFaTajuEbFmbTcxncRcDx3dRfRG7fXoyk7O91gdjEQ7bUDFSRJLHjSFFFwkXSya3ZH4lUUOsyidNQk9vyAU2vCj79WFgIcXNqLw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+  background-position: center;
+  /* top: 0; */
+  /* bottom: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* object-fit: contain; */
+  /* max-height: 100%; */
+}
+
+.storefront h3{
   position: absolute;
-  width: 100%;
-  /* height: 717px; */
-  left: 0px;
-  top: 115px;
+  width: 165px;
+  height: 70px;
+  left: 165px;
+  top: 522px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
 }
 .App-header {
   display: flex;
