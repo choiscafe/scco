@@ -1,6 +1,6 @@
+// import { Counter } from './features/counter/Counter'
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import { Counter } from './features/counter/Counter'
 import Login from './Login'
 import Auth from './Auth'
 import NavBar from './NavBar';
@@ -13,7 +13,6 @@ import Storefront from "./Storefront"
 function App() {
 
   const [currentUser, setCurrentUser] = useState(false)
-  const [errors, setErrors] = useState(false)
   const [products, setProducts] = useState([])
   const [reviews, setReviews] = useState({});
   const [search, setSearch] = useState("")
@@ -78,7 +77,10 @@ function App() {
     {/* <UseContext.Provider> */}
       <div className="App">
         {/* <Counter /> */}
-        <Search search={filterSearch}/>
+        <div className="Topbar">
+          <img src="SCCO.png" className="logo" alt="logo"/>
+          <Search search={filterSearch}/>
+        </div>
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
         {!currentUser ? 
           <Switch>

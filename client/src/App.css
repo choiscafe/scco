@@ -5,6 +5,13 @@ body {
 .App {
   text-align: center;
 } 
+.logo {
+  position: absolute;
+  width: 66.41px;
+  height: auto;
+  left: 235px;
+  top: 22px;
+}
 .searchbar {
   padding: 1rem;
   display: flex;
@@ -67,9 +74,6 @@ position: absolute;
 }
 
 .active {
-  
-  /* position: absolute; */
-
   width: 22px;
   height: 13px;
   left: 255px;
@@ -113,11 +117,4 @@ top: 179px;
     width: 80px;
 
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
