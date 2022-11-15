@@ -3,8 +3,8 @@ import { Link, useHistory } from "react-router-dom"
 
 function Auth({ setCurrentUser }) {
 
-  const [name, setName] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([])
   
@@ -13,8 +13,8 @@ function Auth({ setCurrentUser }) {
   function onSubmit(e) {
     e.preventDefault();
     const user = {
-      name,
       username,
+      email,
       password
     }
     fetch("/users", {
@@ -39,21 +39,21 @@ function Auth({ setCurrentUser }) {
         <h1>SCCO</h1>
         <h2>Create an account</h2>
         <h3>Already have an account?<Link to="/login">Login</Link></h3>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          autoComplete="off"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />{" "}
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="username">username:</label>
         <input
           type="text"
           id="username"
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />{" "}
+        <label htmlFor="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          autoComplete="off"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />{" "}
         <label htmlFor="password">Password:</label>
         <input

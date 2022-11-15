@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {useHistory} from 'react-router-dom'
 
 function LoginForm({ updateUser }) {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const history = useHistory()
@@ -10,7 +10,7 @@ function LoginForm({ updateUser }) {
   function onSubmit(e) {
     e.preventDefault();
     const user = {
-      username, password
+      email, password
     }
     fetch("/login", {
       method: "POST",
@@ -35,13 +35,13 @@ function LoginForm({ updateUser }) {
     <div>
       <form onSubmit={onSubmit}>
         <h1>Sign in to your account</h1>
-        <label htmlFor="username">Username</label>{" "}
+        <label htmlFor="email">Email</label>{" "}
         <input
           type="text"
-          id="username"
+          id="email"
           autoComplete="off"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />{" "}
         <label htmlFor="password">Password</label>{" "}
         <input
@@ -54,7 +54,6 @@ function LoginForm({ updateUser }) {
         <button type="submit">SIGN IN</button>
         {errors.length > 0 && (
           <ul style={{ color: "red" }}>
-            
             {errors.map((error) => (
               <li key={error}>{error}</li>
             ))}
