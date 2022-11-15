@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Counter } from './features/counter/Counter'
+// import { Counter } from './features/counter/Counter'
 import Login from './Login'
 import Auth from './Auth'
 import NavBar from './NavBar';
@@ -77,7 +77,7 @@ function App() {
     <BrowserRouter>
     {/* <UseContext.Provider> */}
       <div className="App">
-        <Counter />
+        {/* <Counter /> */}
         <Search search={filterSearch}/>
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
         {!currentUser ? 
