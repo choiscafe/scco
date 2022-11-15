@@ -7,7 +7,8 @@ import NavBar from './NavBar';
 import ProductsContainer from './ProductsContainer'
 import EditReviewForm from './EditReviewForm'
 import MyReviewsContainer from './MyReviewsContainer'
-
+import Search from "./Search";
+import Storefront from "./Storefront"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   const [errors, setErrors] = useState(false)
   const [products, setProducts] = useState([])
   const [reviews, setReviews] = useState({});
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetch('/reviews')
@@ -44,8 +46,6 @@ function App() {
     });
   }, [])
   
-  
-
   const addReview = (review) => setReviews(current => [...current, review])
 
   const updateReview = (updatedReview) => setReviews(current => {
@@ -59,13 +59,27 @@ function App() {
     })
 
   const handleDeleteReview = (id) => setReviews(current => current.filter(r => r.id === id))
-
   
+  function filterSearch(text) {
+    console.log(text)
+    setSearch(text)
+  }
+  const displayProducts = products.filter(product => {
+        const searchLowerCase = search.toLocaleLowerCase()
+        console.log(searchLowerCase)
+        return (
+            product.name.toLowerCase().includes(searchLowerCase)
+            // planet.climate.toLowerCase().includes(searchLowerCase),
+            // planet.terrain.toLowerCase().includes(searchLowerCase),
+            // planet.population.toLowerCase().includes(searchLowerCase)
+        )
+    })
   return (
     <BrowserRouter>
     {/* <UseContext.Provider> */}
       <div className="App">
         <Counter />
+        <Search search={filterSearch}/>
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
         {!currentUser ? 
           <Switch>
@@ -76,13 +90,11 @@ function App() {
               <Auth setCurrentUser={setCurrentUser} />
             </Route>
             <Route exact path="/">
-              <h1>Hello, welcome to SCCO</h1>
-              <h2>Know your skin food</h2>
-              <h3>Clean & soft Skincare</h3>
+              <Storefront />
             </Route>
             <Route exact path="/products">
               <h1>Products</h1>
-              <ProductsContainer products={products} currentUser={currentUser} />
+              <ProductsContainer products={displayProducts} currentUser={currentUser} />
             </Route>
           </Switch> :
           <Switch>
