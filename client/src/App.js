@@ -61,19 +61,18 @@ function App() {
   const handleDeleteReview = (id) => setReviews(current => current.filter(r => r.id === id))
   
   function filterSearch(text) {
-    console.log(text)
     setSearch(text)
   }
+
   const displayProducts = products.filter(product => {
         const searchLowerCase = search.toLocaleLowerCase()
-        console.log(searchLowerCase)
         return (
-            product.name.toLowerCase().includes(searchLowerCase)
-            // planet.climate.toLowerCase().includes(searchLowerCase),
-            // planet.terrain.toLowerCase().includes(searchLowerCase),
-            // planet.population.toLowerCase().includes(searchLowerCase)
+            product.name.toLowerCase().includes(searchLowerCase)||
+            product.category.toLowerCase().includes(searchLowerCase)||
+            product.brand.toLowerCase().includes(searchLowerCase)
         )
-    })
+  })
+
   return (
     <BrowserRouter>
     {/* <UseContext.Provider> */}
