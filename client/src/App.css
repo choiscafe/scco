@@ -130,6 +130,7 @@ h1 {
   font-size: 40px;
   line-height: 47px;
 }
+
 .create-one{
   position: absolute;
   width: 214px;
@@ -142,6 +143,7 @@ h1 {
   font-size: 16px;
   line-height: 19px;
 }
+
 .create-one a{
   color:red;
 }
@@ -151,7 +153,6 @@ h1 {
   height: 10px;
   left: 33px;
   top: 30px;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
@@ -160,13 +161,11 @@ h1 {
 }
 .email-input{
   box-sizing: border-box;
-
   position: relative;
   width: 395px;
   height: 44px;
   left: -25px;
   top: 77px;
-
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
@@ -176,14 +175,13 @@ h1 {
   height: 10px;
   left: 33px;
   top: 117px;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
 }
-.email-password{
+.password-input{
   box-sizing: border-box;
   position: relative;
   width: 395px;
@@ -195,12 +193,94 @@ h1 {
 }
 button[type="submit"]{
   position: absolute;
-width: 395px;
-height: 44px;
-left: 33px;
-top: 280px;
-border-color:rgb(146, 144, 144);
-background: #A4A4A4;
+  width: 395px;
+  height: 44px;
+  left: 33px;
+  top: 280px;
+  border-color:rgb(146, 144, 144);
+  background: #A4A4A4;
+}
+#create-h1{
+  position: absolute;
+  width: 100%;
+  /* height: 719px; */
+  left: 530px;
+  top: 49px;
+  background: #F2FFFF;
+}
+#already {
+  position: absolute;
+  left: 566px;
+  top: 111px;
+}
+#already a{
+  color:red;
+}
+.username{
+  position: relative;
+  width: 53px;
+  height: 10px;
+  left: 33px;
+  top: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.username-input{
+  box-sizing: border-box;
+  position: relative;
+  width: 395px;
+  height: 44px;
+  left: 33px;
+  top: 33px;
+  background: #FFFFFF;
+  border: 1px solid #F73C52;
+}
+.e-mail{
+  position: relative;
+  width: 53px;
+  height: 10px;
+  left: -366px;
+  top: 80px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.e-mail-input{
+  box-sizing: border-box;
+  position: relative;
+  width: 395px;
+  height: 44px;
+  left: 33px;
+  top: 70px;
+  background: #FFFFFF;
+  border: 1px solid #F73C52;
+}
+.password-create{
+  position: relative;
+  width: 53px;
+  height: 10px;
+  left: 33px;
+  top: 85px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.password-create-input{
+  box-sizing: border-box;
+  position: relative;
+  width: 395px;
+  height: 44px;
+  left: 33px;
+  top: 85px;
+  background: #FFFFFF;
+  border: 1px solid #F73C52;
 }
 .review-card img{
   height: 309px;

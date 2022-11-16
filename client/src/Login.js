@@ -20,9 +20,10 @@ function Login({ updateUser }) {
         <>
           <p className="create-one">
             Already have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(true)}>
+            <Link to="/login">Sign in</Link>
+            {/* <button color="secondary" onClick={() => setShowLogin(true)}>
               Log In
-            </button>
+            </button> */}
           </p>
         </>
       )}

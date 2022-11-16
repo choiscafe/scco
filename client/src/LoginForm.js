@@ -47,7 +47,7 @@ function LoginForm({ updateUser }) {
             />{" "}
             <label className="password" htmlFor="password">PASSWORD</label>{" "}
             <input
-              className="email-password"
+              className="password-input"
               type="password"
               id="password"
               autoComplete="current-password"

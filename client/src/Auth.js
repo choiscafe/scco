@@ -34,36 +34,43 @@ function Auth({ setCurrentUser }) {
     }
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <h1 className="signin-h1">Create an account</h1>
+    <div className="signin-page">
+      
+        <h1 id="create-h1">Create an account</h1>
+          <p id="already">
+            Already have an account?&nbsp;
+            <Link to="/login">Sign in</Link>
+          </p>
+          <form onSubmit={onSubmit}>
           <div className="signin-box">
-            <h3>Already have an account?<Link to="/login">Login</Link></h3>
-            <label htmlFor="username">username:</label>
+            <label className="username" htmlFor="username">USERNAME</label>
             <input
+              className="username-input"
               type="text"
               id="username"
               autoComplete="off"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />{" "}
-            <label htmlFor="email">Email:</label>
+            <label className="e-mail" htmlFor="email">E-MAIL</label>
             <input
+              className="e-mail-input"
               type="text"
               id="email"
               autoComplete="off"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />{" "}
-            <label htmlFor="password">Password:</label>
+            <label className="password-create" htmlFor="password">PASSWORD</label>
             <input
+              className="password-create-input" 
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="current-password"
             />{" "}
-            <input type="submit" value="Sign up" />{" "}
+            <button type="submit">SIGN UP</button>
             {errors.length > 0 && (
               <ul style={{ color: "red" }}>
                 {errors.map((error) => (
