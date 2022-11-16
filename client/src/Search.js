@@ -11,7 +11,7 @@ function Search({ search }) {
       <input
         type="text"
         id="search"
-        placeholder="Products / Categories / Brands                                                        🔍"
+        placeholder=" 🔎  Products / Categories / Brands"
         onChange={handleSearch}
       />
     </div>
