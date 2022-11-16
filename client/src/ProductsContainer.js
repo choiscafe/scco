@@ -14,8 +14,11 @@ function ProductsContainer({ products, currentUser, addReview  }) {
   })
 
   return (
-    <ul className="products-cards">{productsList}</ul>
-  )
+    <div>
+      <h2 className='skincare'>Skincare</h2>
+      <div className="products-cards">{productsList}</div>
+    </div>
+    )
 }
 
 export default ProductsContainer

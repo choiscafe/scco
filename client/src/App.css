@@ -290,6 +290,20 @@ ul{
   font-style: bold;
   line-height: 20px
 }
+.skincare{
+  position: absolute;
+  top: 160px;
+  left: 33px;
+}
+.products-cards{
+  position: absolute;
+  box-sizing: border-box;
+  /* border-width: 0; */
+  border-style: solid;
+    border-color: red;
+    top: 250px;
+    /* display: block; */
+}
 .review-card img{
   height: 309px;
   left: 315px;
