@@ -31,9 +31,7 @@ function NavBar({ updateUser, currentUser }){
         
         {!currentUser? (
             <>
-              <NavLink activeClassName='active' to="/signup">Signup</NavLink>{" "}
-              {/* <NavLink activeClassName='active' to="/login">Sign in</NavLink> */}
-              
+      
             </>
         ) : (
           <>

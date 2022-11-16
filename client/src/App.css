@@ -282,6 +282,14 @@ button[type="submit"]{
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
+ul{
+  position: relative;
+  width: 222px;
+  height: 10px;
+  top: 180px;
+  font-style: bold;
+  line-height: 20px
+}
 .review-card img{
   height: 309px;
   left: 315px;

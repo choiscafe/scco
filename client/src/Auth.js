@@ -72,11 +72,11 @@ function Auth({ setCurrentUser }) {
             />{" "}
             <button type="submit">SIGN UP</button>
             {errors.length > 0 && (
-              <ul style={{ color: "red" }}>
+              <div style={{ color: "red" }}>
                 {errors.map((error) => (
-                  <li key={error}>{error}</li>
+                  <ul key={error}>{error}{" "}</ul>
                 ))}
-              </ul>
+              </div>
             )}
           </div>
       </form>
