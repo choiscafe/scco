@@ -36,41 +36,42 @@ function Auth({ setCurrentUser }) {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <h1>SCCO</h1>
-        <h2>Create an account</h2>
-        <h3>Already have an account?<Link to="/login">Login</Link></h3>
-        <label htmlFor="username">username:</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />{" "}
-        <label htmlFor="email">Email:</label>
-        <input
-          type="text"
-          id="email"
-          autoComplete="off"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />{" "}
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          autoComplete="current-password"
-        />{" "}
-        <input type="submit" value="Sign up" />{" "}
-        {errors.length > 0 && (
-          <ul style={{ color: "red" }}>
-            {errors.map((error) => (
-              <li key={error}>{error}</li>
-            ))}
-          </ul>
-        )}
+        <h1 className="signin-h1">Create an account</h1>
+          <div className="signin-box">
+            <h3>Already have an account?<Link to="/login">Login</Link></h3>
+            <label htmlFor="username">username:</label>
+            <input
+              type="text"
+              id="username"
+              autoComplete="off"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />{" "}
+            <label htmlFor="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              autoComplete="off"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />{" "}
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+            />{" "}
+            <input type="submit" value="Sign up" />{" "}
+            {errors.length > 0 && (
+              <ul style={{ color: "red" }}>
+                {errors.map((error) => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
+            )}
+          </div>
       </form>
     </div>
   );
