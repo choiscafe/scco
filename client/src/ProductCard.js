@@ -42,6 +42,7 @@ function ProductCard({ product, currentUser, addReview }) {
       {displayImage ?
       null :
       <>
+      <div className="product">
         <h2 onClick={handleImage}>Back to product</h2>
         <main>
           <h3>Ingredient</h3>
@@ -67,7 +68,7 @@ function ProductCard({ product, currentUser, addReview }) {
           <PopUp trigger={buttonPopup3} setTrigger={setButtonPopup3}>
             <ReviewsContainer reviews={reviews} currentUser={currentUser}/>
           </PopUp>
-          
+        </div>
       </>
     }
     </div>

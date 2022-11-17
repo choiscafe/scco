@@ -15,7 +15,7 @@ function MyReviewsContainer({ currentUser, handleDeleteReview }) {
   })
 
   return (
-    <ul className="reviews-cards">{review}</ul>
+    <ul className="myreviews-cards">{review}</ul>
   )
 }
 

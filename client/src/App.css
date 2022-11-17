@@ -32,12 +32,20 @@ body {
 .searchbar input::placeholder{
   font-size: 16px;
 }
-.login{
+.login {
   position: absolute;
   width: auto;
   height: 22px;
   left: 833px;
   top: 37px;
+}
+.welcome{
+  position: absolute;
+  width: 16px;
+  left: 844px;
+  top: 7px;
+  color:#5EDFDF;
+  font-size: 20px;
 }
 .signin{
   position: absolute;
@@ -362,11 +370,13 @@ ul{
   flex-direction:column;
   top:22px;
   width: 1100px;
+  height: auto
 }
 .ingredient-card{
   background-color: white;
   float: right;
   width: 50%;
+  height: auto;
   text-align: center;
 }
 .reviews-cards{
@@ -378,13 +388,34 @@ ul{
   flex-direction:column;
   top:19px;
   width: 1100px;
+  height: auto
+}
+.myreviews{
+  top: 129px;
+  left: 66px;
+  width: 100%;
+  height: auto;
+}
+.myreviews-cards{
+  position: absolute;
+  margin: 1rem;
+  padding: 0.5rem 0.5rem;
+  display:flex; 
+  flex-direction:column;
+  top: 229px;
+  left: 410px;
+  width: 1100px;
+  height: auto
 }
 .review-card{
-  background-color: white;
   float: right;
   width: 50%;
+  height: auto;
   text-align: center;
   margin-bottom: 30px;
+  border: 2px solid #5EDFDF;
+  background: white;
+  border-radius: 13px;
 }
 .w-6{
   height: 18px;

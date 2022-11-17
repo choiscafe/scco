@@ -96,8 +96,13 @@ function App() {
         <div className="Topbar">
           <Link to={`/`}><img src="SCCO.png" className="logo" alt="logo" /></Link>
           <Search search={filterSearch}/>
-          <img src="login.png" className="login" alt="login"/>
-          <NavLink className='signin' to="/login">Sign in</NavLink>
+          {!currentUser ? 
+            <div>
+              <img src="login.png" className="login" alt="login"/>
+              <NavLink className='signin' to="/login">Sign in</NavLink>
+            </div>
+          : <h2 className="welcome">Welcome, {currentUser.username}!</h2>
+          }
         </div>
         <NavBar updateUser={updateUser} currentUser={currentUser}/>
         {!currentUser ? 
@@ -117,15 +122,13 @@ function App() {
           </Switch> :
           <Switch>
             <Route exact path="/">
-              <h1>Welcome to SCCO</h1>
-              <h2>Welcome, {currentUser.username}!</h2>
-              <h3>Clean & soft Skincare</h3>
+              <Storefront />
             </Route>
             <Route exact path="/products">
               <ProductsContainer addReview={addReview} products={products} currentUser={currentUser}/>
             </Route>
             <Route exact path="/myreviews">
-              <h1>My Reviews</h1>
+              <h1 className="myreviews">My Reviews</h1>
               <MyReviewsContainer reviews={reviews} currentUser={currentUser} handleDeleteReview={handleDeleteReview}/>
             </Route>
             <Route exact path="/myreviews/:id/edit">
