@@ -379,14 +379,15 @@ ul{
 }
 .ingredients-cards{
   position: absolute;
-  margin: 1rem;
-  padding: 0.5rem 0.5rem;
+  padding: 1.5rem 1rem;
   text-align: right;
   display:flex; 
   flex-direction:column;
   top: 120px;
   width: 800px;
   height: auto;
+  /* background-color: white;
+  border: 2px solid #5EDFDF; */
 }
 .ingredient-card{
   display:flex; 
@@ -397,10 +398,18 @@ ul{
   height: auto;
   text-align: center;
 }
+.ingredient-card p{
+  text-align: left;
+  margin-left: 10px;
+}
+.ewg-main{
+  margin-bottom: 10px;
+  width: 450px;
+}
 .ewg{
   position: relative;
   width: 30px;
-  /* height: auto; */
+  /* margin-left: 10px; */
 }
 .chart{
   border: 2px solid #5EDFDF;
