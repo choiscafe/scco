@@ -125,7 +125,7 @@ function App() {
               <Storefront />
             </Route>
             <Route exact path="/products">
-              <ProductsContainer addReview={addReview} products={products} currentUser={currentUser}/>
+              <ProductsContainer addReview={addReview} products={displayProducts} currentUser={currentUser}/>
             </Route>
             <Route exact path="/myreviews">
               <h1 className="myreviews">My Reviews</h1>
