@@ -329,6 +329,7 @@ ul{
   width: 300px;
   margin-bottom: 0;
 }
+
 .product-brand{
   width: 300px;
   margin-top: 0;
@@ -383,6 +384,7 @@ ul{
   float: right;
   width: 50%;
   text-align: center;
+  margin-bottom: 30px;
 }
 .w-6{
   height: 18px;
@@ -392,4 +394,8 @@ ul{
   flex-direction:row;
   position: relative;
   left: 230px;
+}
+
+.error{
+  font-size: 14px
 }

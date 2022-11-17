@@ -56,7 +56,7 @@ function NewReviewForm({ addReview }) {
         <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
         <input type="submit" name="submit" value="Create New Review" className="submit"/>
       </form>
-      {errors?errors.map(e => <h2 key={errors} style={{color:'red'}}>{e.toUpperCase()}</h2>):null}
+      {errors?errors.map(e => <h2 className="error" key={errors} style={{color:'red'}}>{e.toUpperCase()}</h2>):null}
     </div>
   );
 }

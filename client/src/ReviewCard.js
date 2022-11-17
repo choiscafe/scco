@@ -52,11 +52,9 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
             onSaveRating={onSaveRating} />
         )
       })}</p>
-      <p>Comments: {comments}</p>
-      <p>Tips: {tips}</p>
-      <img src={picture} alt={product_id}/>
-      {/* <p>{user_id}</p>    */}
-      
+      <p><b>Comments:</b> {comments}</p>
+      <p><b>Tips:</b> {tips}</p>
+      <img className="review-pic" src={picture} alt={product_id}/>
       { user_id === currentUser.id ?
         <>
           <span> <button className='edit-btn'><Link to={`/myreviews/${id}/edit`}>Edit Review</Link></button></span>
