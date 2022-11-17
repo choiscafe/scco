@@ -389,6 +389,8 @@ ul{
   height: auto;
 }
 .ingredient-card{
+  display:flex; 
+  flex-direction:row;
   background-color: white;
   float: left;
   width: 50%;
@@ -396,8 +398,9 @@ ul{
   text-align: center;
 }
 .ewg{
-  width: 450px;
-  height: auto;
+  position: relative;
+  width: 30px;
+  /* height: auto; */
 }
 .chart{
   border: 2px solid #5EDFDF;
