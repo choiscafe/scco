@@ -22,14 +22,14 @@ function ProductCard({ product, currentUser, addReview }) {
   return (
     <div className="product-card">
       {displayImage ?
-        <>
-          <img src={image} alt={name} onClick={handleImage} />
-          <p onClick={handleImage}>{brand}</p>
-          <p onClick={handleImage}>{name}</p>
-          <p>{category}</p>
-          <p>Avarage Review: {product.averageScore}</p>
-          <p>{price_size}</p>
-        </>
+        <div className="product">
+          <img className="product-picture" src={image} alt={name} onClick={handleImage} />
+          <p className="product-brand" onClick={handleImage}>{brand}</p>
+          <p className="product-name" onClick={handleImage}>{name}</p>
+          <p className="product-category"> {category}</p>
+          <p className="product-rating">Avarage Review: {product.averageScore}</p>
+          <p className="product-price">{price_size}</p>
+        </div>
         :
         null
       }

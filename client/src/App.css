@@ -1,5 +1,4 @@
 body {
- line-height: 1.5;
   min-height: 100vh
 }
 .App {
@@ -295,32 +294,59 @@ ul{
   top: 160px;
   left: 33px;
 }
-.products-cards{
-  position: absolute;
-  box-sizing: border-box;
-  /* border-width: 0; */
-  border-style: solid;
-    border-color: red;
-    top: 250px;
-    /* display: block; */
-}
+
 .review-card img{
   height: 309px;
   left: 315px;
   top: 179px;
   }
-.product-card img{
-height: 309px;
-left: 315px;
-top: 179px;
+  .products-cards{
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    display:flex; 
+    flex-direction:row;
+  }
+.product{
+  width: 300px;
+  object-fit: contain;
+  object-position: top;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  left: 315px;
+  top: 179px;
+  display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+.product-picture{
+  width: 300px;
+
+}
+.product-brand{
+  width: 300px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.product-name{
+  width: 300px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+}
+.product-category{
+  width: 300px;
+}
+.product-rating{
+  width: 300px;
+}
+.product-price{
+  width: 300px;
 }
 
-.product-card {
-  /* position: absolute; */
-  margin: 1rem;
-  /* identical to box height */
-  color: #000000;
-}
 
 .w-6{
   background-position: -2px -42px;
