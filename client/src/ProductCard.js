@@ -53,7 +53,9 @@ function ProductCard({ product, currentUser, addReview }) {
         </PopUp >
         <button onClick={() => setButtonPopup2(true)}>see all ingredients</button>
         <PopUp trigger={buttonPopup2} setTrigger={setButtonPopup2}>
-            <IngredientsContainer ingredients={ingredients} />
+          <p>HAZARD SCORE RANGE Score legend</p>
+          <img className="ewg" src="https://phorcys-static.ewg.org/skindeep_rails/scoring-header-3ec603e84ffa06b94f49a46aaaae5538a99f2194fda35aeea2730a9799a7438d.svg" alt="ewg_rating"></img>
+          <IngredientsContainer ingredients={ingredients} />
         </PopUp>
         <h3>Rating & Reviews</h3>
           {showForm ? <NewReviewForm addReview={addReview}/> : null}

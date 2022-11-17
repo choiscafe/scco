@@ -4,12 +4,12 @@ function IngredientCard({ ingredient }){
   
   return (
     <div className="ingredient-card">
-      <p>{name}</p>
-      {/* <p>{ewg_rating}</p>
+    <p>{name}</p>
+      <p>{ewg_rating}</p> 
       <p>{toxic}</p>
       <p>{irritant}</p>
       <p>{skin_type}</p>
-      <p>{functional}</p> */}
+      <p>{functional}</p> 
     </div>
   )
 }

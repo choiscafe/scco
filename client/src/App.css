@@ -384,24 +384,26 @@ ul{
   text-align: right;
   display:flex; 
   flex-direction:column;
-  top:39px;
+  top: 120px;
   width: 800px;
   height: auto;
 }
 .ingredient-card{
   background-color: white;
-  float: right;
+  float: left;
   width: 50%;
   height: auto;
   text-align: center;
 }
+.ewg{
+  width: 450px;
+  height: auto;
+}
 .chart{
   border: 2px solid #5EDFDF;
-  /* height: 140px */
 }
 .reviews-cards{
   position: absolute;
-  /* margin: 1rem; */
   padding: 0.5rem 0rem;
   text-align: right;
   display:flex; 
