@@ -327,27 +327,30 @@ ul{
 }
 .product-picture{
   width: 300px;
-
+  margin-bottom: 0;
 }
 .product-brand{
   width: 300px;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 .product-name{
   width: 300px;
   font-size: 14px;
   font-weight: 500;
-  margin-top: 0;
+  margin-bottom: 0px;
 }
 .product-category{
+  margin-top: 0;
   width: 300px;
 }
 .product-rating{
   width: 300px;
+  margin-top: 0;
 }
 .product-price{
   width: 300px;
+  margin-bottom: 0px;
 }
 
 
