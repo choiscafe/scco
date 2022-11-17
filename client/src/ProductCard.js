@@ -10,6 +10,7 @@ function ProductCard({ product, currentUser, addReview }) {
 
   const [buttonPopup, setButtonPopup] = useState(false)
   const [buttonPopup2, setButtonPopup2] = useState(false)
+  const [buttonPopup3, setButtonPopup3] = useState(false)
   const [displayImage, setDisplayImage] = useState(true)
   const [showForm, setShowForm] = useState(false);
 
@@ -50,10 +51,10 @@ function ProductCard({ product, currentUser, addReview }) {
           <div><BarChart product={product} /></div>
         </PopUp >
         <button onClick={() => setButtonPopup2(true)}>see all ingredients</button>
-        <PopUp className="popup2" trigger={buttonPopup2} setTrigger={setButtonPopup2}>
+        <PopUp trigger={buttonPopup2} setTrigger={setButtonPopup2}>
             <IngredientsContainer ingredients={ingredients} />
-          </PopUp>
-        <h2>Rating & Reviews</h2>
+        </PopUp>
+        <h3>Rating & Reviews</h3>
           {showForm ? <NewReviewForm addReview={addReview}/> : null}
           {!showForm ? 
             <p className="buttonContainer">
@@ -62,7 +63,11 @@ function ProductCard({ product, currentUser, addReview }) {
             : 
             null 
           }
-        <ReviewsContainer reviews={reviews} currentUser={currentUser}/>
+          <button onClick={() => setButtonPopup3(true)}>See all reviews</button>
+          <PopUp trigger={buttonPopup3} setTrigger={setButtonPopup3}>
+            <ReviewsContainer reviews={reviews} currentUser={currentUser}/>
+          </PopUp>
+          
       </>
     }
     </div>

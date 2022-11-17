@@ -39,8 +39,8 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
 
   return (
     <div className="review-card">
-      <p>{user.username}</p> 
-      <p>{[1, 2, 3, 4, 5].map((index) => {
+      <p>ʕ•́ᴥ•̀ʔっ♡ {user.username}</p> 
+      <p className='star'>{[1, 2, 3, 4, 5].map((index) => {
         return (
           <RatingIcon 
             key={index.id}
@@ -55,7 +55,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }){
       <p>Comments: {comments}</p>
       <p>Tips: {tips}</p>
       <img src={picture} alt={product_id}/>
-      <p>{user_id}</p>   
+      {/* <p>{user_id}</p>    */}
       
       { user_id === currentUser.id ?
         <>
