@@ -331,9 +331,13 @@ ul{
   margin: 1rem;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  display:flex; 
-  flex-direction:row;
+  /* display:flex; 
+  flex-direction:row; */
   top: 199px;
+  left: 115px;
+  column-gap: 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .product{
   width: 300px;

@@ -23,6 +23,7 @@ function ProductCard({ product, currentUser, addReview }) {
   function handleClick() {
     setShowForm((showForm) => !showForm);
   }
+  
  
   return (
     <div className="product-card">
@@ -77,7 +78,3 @@ function ProductCard({ product, currentUser, addReview }) {
   )
 }
 export default ProductCard
-
-// <Popup trigger={<button> Trigger</button>} position="right center">
-//     <div>Popup content here !!</div>
-//   </Popup>

@@ -51,6 +51,9 @@ function App() {
   for(let i= 0; i<averageScores.length; i++){
     // Push avarage score inside products array
     products[i].averageScore = averageScores[i]
+    // restrict averageScore in two decimal places
+    products[i].averageScore = Math.round(products[i].averageScore*100)/100
+
   }
  
   function reviewAverage(array){
