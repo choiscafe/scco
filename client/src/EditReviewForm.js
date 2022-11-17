@@ -54,7 +54,7 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
   return (
     <div className="edit-review-form">
       <div className="edit-review-form__header">
-        <h1>{`Edit Review Product ${id}`}</h1>
+        <h1>{`Edit Your Review`}</h1>
         <form onSubmit={onSubmit}>
           <input type="number" name="score" step="1" onChange={handleChange} value={formData.score} placeholder="Review Score" /><br></br>
           <input type="text" name="comments" onChange={handleChange} value={formData.comments} placeholder="Review Comments" /><br></br>
@@ -70,7 +70,7 @@ function EditReviewForm({ updateReview, setReviews, currentUser, reviews }) {
             </ul>
           )}
           
-          <input type="submit" name="submit" value="Update Collection" className="submit" /><Link to={`/myreviews`}></Link>
+          <input type="submit" name="submit" value="Update Collection" /><Link to={`/myreviews`}></Link>
           {/* <span><button className="submit-btn" name="submit" value="Update New Review"><Link to={`/myreviews`}>Review Update</Link></button></span> */}
         </form>
       </div>

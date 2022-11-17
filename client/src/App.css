@@ -319,7 +319,9 @@ ul{
   top: 160px;
   left: 33px;
 }
-
+.review-pic{
+  max-width: 500px;
+}
 .review-card img{
   height: 309px;
   left: 315px;
@@ -327,12 +329,9 @@ ul{
   }
 .products-cards{
   position: absolute;
-  /* border: 1px solid black; */
   margin: 1rem;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  /* display:flex; 
-  flex-direction:row; */
   top: 199px;
   left: 115px;
   column-gap: 5%;
@@ -343,12 +342,9 @@ ul{
   width: 300px;
   object-fit: contain;
   object-position: top;
-  /* border-width: 2px;
-  border-style: solid; */
   left: 315px;
   top: 179px;
   display: inline-block;
-  /* border: 1px solid red; */
   padding: 0.5rem 0.5rem;
   vertical-align: middle;
   height: 480px;
@@ -388,7 +384,7 @@ ul{
   display:flex; 
   flex-direction:column;
   top: 120px;
-  width: 800px;
+  width: 900px;
   height: auto;
 }
 .ingredient-card{
@@ -427,6 +423,23 @@ ul{
   height: auto
   
 }
+.edit-review-form__header{
+  position: absolute;
+  top: 129px;
+  left: 96px;
+  width: 100%;
+  height: auto;
+}
+.edit-review-form__header input{
+  position: relative;
+  top: 229px;
+  left: 380px;
+  width: 500px;
+  height: 30px;
+}
+/* .edit-submit{
+  width: 560px;
+} */
 .myreviews{
   top: 129px;
   left: 66px;
@@ -461,7 +474,7 @@ ul{
   display:flex; 
   flex-direction:row;
   position: relative;
-  left: 230px;
+  left: 205px;
 }
 
 .error{

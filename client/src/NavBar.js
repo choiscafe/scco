@@ -37,7 +37,6 @@ function NavBar({ updateUser, currentUser }){
         ) : (
           <>
             <NavLink activeClassName='activereview' to="/myreviews">My Reviews</NavLink>{" "}
-            {/* <p>Welcome, {currentUser.username}!</p> */}
             <button className="signout" onClick={handleLogoutClick}>Sign out</button>
           </>
         )}
