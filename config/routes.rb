@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
   # get '/products', to: 'products#index'
   # get '/myreviews', to: 'reviews#index'
-  # patch '/reviews/:id', to: 'reviews#update'
+  # get '/products/:id', to: 'producs#show'
   post '/login', to: 'sessions#create'
   delete "/logout", to: "sessions#destroy"
 

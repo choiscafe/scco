@@ -9,6 +9,7 @@ import EditReviewForm from './EditReviewForm'
 import MyReviewsContainer from './MyReviewsContainer'
 import Search from "./Search";
 import Storefront from "./Storefront"
+// import DetailPage from './DetailPage'
 
 function App() {
 
@@ -123,6 +124,9 @@ function App() {
             <Route exact path="/products">
               <ProductsContainer addReview={addReview} products={products} currentUser={currentUser}/>
             </Route>
+            {/* <Route exact path="/products/:id">
+              <DetailPage />
+            </Route> */}
             <Route exact path="/myreviews">
               <h1>My Reviews</h1>
               <MyReviewsContainer reviews={reviews} currentUser={currentUser} handleDeleteReview={handleDeleteReview}/>

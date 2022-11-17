@@ -1,15 +1,19 @@
-import { useState } from "react";
+// import { useState } from "react";
 import IngredientsContainer from './IngredientsContainer'
 import ReviewsContainer from './ReviewsContainer'
 import NewReviewForm from './NewReviewForm'
 import BarChart from './components/BarChart'
-
+import { useState, useEffect } from "react";
 function DetailPage({product, currentUser, addReview}){
 
   const {id, name, category, brand, image, price_size, ingredients, reviews } = product
   const [showForm, setShowForm] = useState(false);
-
-
+  // // const [showDetail, setShowDetail] = useState({})
+  // useEffect(() => {
+  //   fetch(`/products/${id}`)
+  //   .then(res => res.json())
+  //   .then(showDetail => setShowDetail(showDetail))
+  // }, [id])
   function handleClick() {
     setShowForm((showForm) => !showForm);
   }
