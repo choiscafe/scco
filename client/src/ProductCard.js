@@ -3,9 +3,13 @@ import IngredientsContainer from './IngredientsContainer'
 import ReviewsContainer from './ReviewsContainer'
 import NewReviewForm from './NewReviewForm'
 import BarChart from './components/BarChart'
+import PopUp from './components/PopUp'
+import 'reactjs-popup/dist/index.css';
 
 function ProductCard({ product, currentUser, addReview }) {
 
+  const [buttonPopup, setButtonPopup] = useState(false)
+  const [buttonPopup2, setButtonPopup2] = useState(false)
   const [displayImage, setDisplayImage] = useState(true)
   const [showForm, setShowForm] = useState(false);
 
@@ -37,9 +41,18 @@ function ProductCard({ product, currentUser, addReview }) {
       {displayImage ?
       null :
       <>
-        <h2 onClick={handleImage}>Ingredient: </h2>
-        <BarChart product={product} onClick={handleImage}/>
-        <IngredientsContainer ingredients={ingredients} />
+        <h2 onClick={handleImage}>Back to product</h2>
+        <main>
+          <button onClick={() => setButtonPopup(true)}>see ingredients</button>
+        </main>
+        <PopUp trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <div><BarChart product={product} /></div>
+          <button onClick={() => setButtonPopup2(true)}>see all ingredients</button>
+          <PopUp trigger={buttonPopup2} setTrigger={setButtonPopup2}>
+           <IngredientsContainer ingredients={ingredients} />
+          </PopUp>
+        </PopUp >
+        
         <h2>Rating & Reviews</h2>
           {showForm ? <NewReviewForm addReview={addReview}/> : null}
           {!showForm ? 
@@ -56,3 +69,7 @@ function ProductCard({ product, currentUser, addReview }) {
   )
 }
 export default ProductCard
+
+// <Popup trigger={<button> Trigger</button>} position="right center">
+//     <div>Popup content here !!</div>
+//   </Popup>

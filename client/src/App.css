@@ -352,7 +352,11 @@ ul{
   width: 300px;
   margin-bottom: 0px;
 }
-
+/* .chart{
+  position: relative;
+  width: 10px;
+  height: 50vh;
+} */
 
 .w-6{
   background-position: -2px -42px;

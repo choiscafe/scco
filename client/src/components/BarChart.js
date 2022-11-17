@@ -107,7 +107,7 @@ function BarChart({ product }){
     ],
   };
   return (
-    <div>
+    <div >
       <Bar
         options={options}
         data={data}
