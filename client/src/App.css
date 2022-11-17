@@ -352,11 +352,22 @@ ul{
   width: 300px;
   margin-bottom: 0px;
 }
-/* .chart{
-  position: relative;
-  width: 10px;
-  height: 50vh;
-} */
+.ingredients-cards{
+  position: absolute;
+  margin: 1rem;
+  padding: 0.5rem 0.5rem;
+  text-align: right;
+  display:flex; 
+  flex-direction:column;
+  top:22px;
+  width: 1100px;
+}
+.ingredient-card{
+  background-color: white;
+  float: right;
+  width: 50%;
+  text-align: center;
+}
 
 .w-6{
   background-position: -2px -42px;

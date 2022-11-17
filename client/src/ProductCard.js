@@ -43,16 +43,16 @@ function ProductCard({ product, currentUser, addReview }) {
       <>
         <h2 onClick={handleImage}>Back to product</h2>
         <main>
-          <button onClick={() => setButtonPopup(true)}>see ingredients</button>
+          <h3>Ingredient</h3>
+          <button onClick={() => setButtonPopup(true)}>At a glance</button>
         </main>
         <PopUp trigger={buttonPopup} setTrigger={setButtonPopup}>
           <div><BarChart product={product} /></div>
-          <button onClick={() => setButtonPopup2(true)}>see all ingredients</button>
-          <PopUp trigger={buttonPopup2} setTrigger={setButtonPopup2}>
-           <IngredientsContainer ingredients={ingredients} />
-          </PopUp>
         </PopUp >
-        
+        <button onClick={() => setButtonPopup2(true)}>see all ingredients</button>
+        <PopUp className="popup2" trigger={buttonPopup2} setTrigger={setButtonPopup2}>
+            <IngredientsContainer ingredients={ingredients} />
+          </PopUp>
         <h2>Rating & Reviews</h2>
           {showForm ? <NewReviewForm addReview={addReview}/> : null}
           {!showForm ? 
