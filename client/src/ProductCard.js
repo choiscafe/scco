@@ -49,7 +49,7 @@ function ProductCard({ product, currentUser, addReview }) {
           <button onClick={() => setButtonPopup(true)}>At a glance</button>
         </main>
         <PopUp trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <div><BarChart product={product} /></div>
+          <div className="chart"><BarChart product={product} /></div>
         </PopUp >
         <button onClick={() => setButtonPopup2(true)}>see all ingredients</button>
         <PopUp trigger={buttonPopup2} setTrigger={setButtonPopup2}>

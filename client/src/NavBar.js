@@ -9,6 +9,7 @@ function NavBar({ updateUser, currentUser }){
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         updateUser(false); 
+        alert("See you again (ʘ‿ʘ)ノ✿")
         history.push(`/`)
       }
     })
@@ -35,9 +36,9 @@ function NavBar({ updateUser, currentUser }){
             </>
         ) : (
           <>
-            <NavLink activeClassName='active' to="/myreviews">My Reviews</NavLink>{" "}
-            <p>Welcome, {currentUser.username}!</p>
-            <button onClick={handleLogoutClick}>Sign out</button>
+            <NavLink activeClassName='activereview' to="/myreviews">My Reviews</NavLink>{" "}
+            {/* <p>Welcome, {currentUser.username}!</p> */}
+            <button className="signout" onClick={handleLogoutClick}>Sign out</button>
           </>
         )}
       </li>

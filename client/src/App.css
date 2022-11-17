@@ -85,10 +85,27 @@ padding: 10px 0;
   /* position: relative; */
   display: inline-block;
    padding: 10px;
-   color: black
+   color: black;
+
+}
+.activereview {
+  display: inline-block;
+   padding: 10px;
+   color: black;
+   font-weight: 500;
 }
 a:visited {
   color: black
+}
+.signout{
+  position: absolute;
+  width: 65px;
+  height: 24px;
+  left: 1011px; 
+  top: 4px;
+  border-color: #5EDFDF;
+  background: white; 
+  border-radius: 13px; 
 }
 .storefront{
   display: block;
@@ -96,7 +113,7 @@ a:visited {
   background-image: url(https://s3-alpha-sig.figma.com/img/d9d4/43f9/aea74823f5e974463646bb382d27639e?Expires=1669593600&Signature=KUPgICOnai-xcWqEsRhPg-TcBjnJFIPAKjgcWpqkvJwYxt7YXPvkNJZ0361sG0QxnzdgFtN8CehIS5kqSbHAUXGZUJpIVHaRk62b9Qnnot1B7zaji6NiEC0Feh9G-WqAGBZmem9eh0EFYn~z5-o65pxMAMFcairKyquyXTAAvSusHeQu3oNdbMIroMQWHgCUtcZUOFAlrzx74-aE5x4pUaib6meMupmZ0BcbRSjSxF5H35zIqnOoFaTajuEbFmbTcxncRcDx3dRfRG7fXoyk7O91gdjEQ7bUDFSRJLHjSFFFwkXSya3ZH4lUUOsyidNQk9vyAU2vCj79WFgIcXNqLw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
   position: absolute;
   width: 100%;
-  height: 654px;
+  height: 561px;
   left: 0px;
   top: 135px;
 }
@@ -105,7 +122,7 @@ a:visited {
   position: absolute;
   width: 165px;
   left: 165px;
-  top: 400px;
+  top: 350px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -310,7 +327,7 @@ ul{
   }
 .products-cards{
   position: absolute;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 1rem;
   padding: 0.5rem 0.5rem;
   text-align: center;
@@ -322,13 +339,12 @@ ul{
   width: 300px;
   object-fit: contain;
   object-position: top;
-  border-width: 2px;
-  border-style: solid;
-  border-color: red;
+  /* border-width: 2px;
+  border-style: solid; */
   left: 315px;
   top: 179px;
   display: inline-block;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 0.5rem 0.5rem;
   vertical-align: middle;
   height: 480px;
@@ -368,9 +384,9 @@ ul{
   text-align: right;
   display:flex; 
   flex-direction:column;
-  top:22px;
-  width: 1100px;
-  height: auto
+  top:39px;
+  width: 800px;
+  height: auto;
 }
 .ingredient-card{
   background-color: white;
@@ -379,16 +395,21 @@ ul{
   height: auto;
   text-align: center;
 }
+.chart{
+  border: 2px solid #5EDFDF;
+  /* height: 140px */
+}
 .reviews-cards{
   position: absolute;
-  margin: 1rem;
-  padding: 0.5rem 0.5rem;
+  /* margin: 1rem; */
+  padding: 0.5rem 0rem;
   text-align: right;
   display:flex; 
   flex-direction:column;
-  top:19px;
-  width: 1100px;
+  top:39px;
+  width: 1000px;
   height: auto
+  
 }
 .myreviews{
   top: 129px;

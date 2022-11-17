@@ -23,7 +23,9 @@ function LoginForm({ updateUser }) {
       if (r.ok) {
         r.json().then(user => {
           updateUser(user)
-          history.push(`/users/${user.id}`)
+          setErrors([])
+          alert("Welcome Back ♡＼(￣▽￣)／♡")
+          history.push(`/`)
       })
      } else {
         r.json().then((errorData) => setErrors(Object.entries(errorData.errors).map(e=> `${e[0]} ${e[1]}`)));
