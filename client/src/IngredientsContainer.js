@@ -6,7 +6,7 @@ function IngredientsContainer({ ingredients }){
     
     return (
       <div>
-      
+        
         <IngredientCard
           key={ingredient.id}
           ingredient={ingredient}
