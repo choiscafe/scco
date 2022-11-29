@@ -10,6 +10,8 @@ User.create(username: "Rafia", email: "rafia@gmail.com", password: "Rafia", admi
 User.create(username: "Ellie", email: "ellie@gmail.com", password: "Ellie", admin: false)
 Product.create(name: "Calm + Restore Triple Oat Hydrating Face Serum for Sensitive Skin", category: "Serum", brand: "Aveeno", image: "https://m.media-amazon.com/images/I/71uEPq-7ivL._SL1500_.jpg", price_size: "$19.67/1 fl. oz")
 Product.create(name: "Snail Mucin 92% Repair Cream", category: "Moisturizer", brand: "COSRX", image: "https://m.media-amazon.com/images/I/7135DSnMj+L._SL1500_.jpg", price_size: "$22.73/3.52 oz, 100g")
+Product.create(name: "Brightening Glowing Serum", category: "Serum", brand: "Acure", image: "https://m.media-amazon.com/images/I/61FVslo8hcL._SL1500_.jpg", price_size: "$14.26/1 fl. oz")
+Product.create(name: "Natural Moisturizing Factors HA", category: "Moisturizer", brand: "The Ordinary", image: "https://m.media-amazon.com/images/I/51LulCr6HaL._SL1440_.jpg", price_size: "$8.70/30ml")
 Product.create(name: "Alcohol-Free Rose Petal Witch Hazel Facial Toner with Aloe Vera Formula", category: "Toner", brand: "THAYERS", image: "https://m.media-amazon.com/images/I/716ikV1+ToL._SL1500_.jpg", price_size: "$10.40/12 oz")
 Product.create(name: "Carrot Carotene Calming Water Pad ", category: "Water pad", brand: "SKINFOOD", image: "https://m.media-amazon.com/images/I/71rRo+F72wL._SL1024_.jpg", price_size: "$19.99/250g, 8.81 oz.")
 Product.create(name: "Eye Cream to Reduce Puffiness, Lines and Dark Circles", category: "Eye Cream", brand: "L'Oreal Paris", image: "https://m.media-amazon.com/images/I/61tuB-TSc1L._SL1500_.jpg", price_size: "$11.25/0.5 oz")

@@ -37,6 +37,7 @@ function NewReviewForm({ addReview }) {
       if(r.ok){
         r.json().then(addReview) 
         setErrors([])
+        alert('Thanks for the review!')
         } else {
           //Display errors
           r.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
