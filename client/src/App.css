@@ -1,16 +1,19 @@
 body {
   min-height: 100vh
 }
+
 .App {
   width: 100%;
   height: auto;
   background: #FFFFFF;
-} 
-.Topbar{
+}
+
+.Topbar {
   position: absolute;
   left: 150px;
   top: 0;
 }
+
 .logo {
   position: absolute;
   width: 90px;
@@ -18,7 +21,8 @@ body {
   left: 210px;
   top: 15px;
 }
-.searchbar input{
+
+.searchbar input {
   padding: 0 3.5rem 0 1rem;
   position: absolute;
   width: 350px;
@@ -29,9 +33,11 @@ body {
   background: #F5F5F5;
   border-radius: 13px;
 }
-.searchbar input::placeholder{
+
+.searchbar input::placeholder {
   font-size: 16px;
 }
+
 .login {
   position: absolute;
   width: auto;
@@ -39,17 +45,19 @@ body {
   left: 833px;
   top: 37px;
 }
-.welcome{
+
+.welcome {
   position: absolute;
   width: 16px;
   left: 844px;
   top: 7px;
-  color:#5EDFDF;
+  color: #5EDFDF;
   font-size: 20px;
 }
-.signin{
+
+.signin {
   position: absolute;
-  width:66px;
+  width: 66px;
   left: 849px;
   top: 34px;
   padding: 9.5px;
@@ -60,20 +68,22 @@ body {
   font-size: 17px;
   line-height: 13px;
 }
+
 .App-header {
   position: absolute;
-width: 100%;
-height: 32px;
-left: 0px;
-top: 83px;
-font-family: 'Roboto';
+  width: 100%;
+  height: 32px;
+  left: 0px;
+  top: 83px;
+  font-family: 'Roboto';
 
   background: #5EDFDF;
   text-align: center;
-margin: 0px 0 0 ;
-padding: 10px 0;
+  margin: 0px 0 0;
+  padding: 10px 0;
 }
-.Menu{
+
+.Menu {
   position: absolute;
   height: 13px;
   left: 255px;
@@ -81,36 +91,41 @@ padding: 10px 0;
   margin: 0 2px;
   padding: 0;
 }
+
 .active {
   /* position: relative; */
   display: inline-block;
-   padding: 10px;
-   color: black;
+  padding: 10px;
+  color: black;
 
 }
+
 .activereview {
   display: inline-block;
-   padding: 10px;
-   color: black;
-   font-weight: 500;
+  padding: 10px;
+  color: black;
+  font-weight: 500;
 }
+
 a:visited {
   color: black
 }
-.signout{
+
+.signout {
   position: absolute;
   width: 65px;
   height: 24px;
-  left: 1011px; 
+  left: 1011px;
   top: 4px;
   border-color: #5EDFDF;
-  background: white; 
-  border-radius: 13px; 
+  background: white;
+  border-radius: 13px;
 }
-.storefront{
+
+.storefront {
   display: block;
   background-position: center;
-  background-image: url(https://s3-alpha-sig.figma.com/img/d9d4/43f9/aea74823f5e974463646bb382d27639e?Expires=1669593600&Signature=KUPgICOnai-xcWqEsRhPg-TcBjnJFIPAKjgcWpqkvJwYxt7YXPvkNJZ0361sG0QxnzdgFtN8CehIS5kqSbHAUXGZUJpIVHaRk62b9Qnnot1B7zaji6NiEC0Feh9G-WqAGBZmem9eh0EFYn~z5-o65pxMAMFcairKyquyXTAAvSusHeQu3oNdbMIroMQWHgCUtcZUOFAlrzx74-aE5x4pUaib6meMupmZ0BcbRSjSxF5H35zIqnOoFaTajuEbFmbTcxncRcDx3dRfRG7fXoyk7O91gdjEQ7bUDFSRJLHjSFFFwkXSya3ZH4lUUOsyidNQk9vyAU2vCj79WFgIcXNqLw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+  background-image: url(https://s3-alpha-sig.figma.com/img/d9d4/43f9/aea74823f5e974463646bb382d27639e?Expires=1670803200&Signature=HJj5EvT3COtRbHN5rW-wu7Ajg9j3JK8JeYTVKkVwRIhf2P3NHvWdBtJ5N7HpNe0nOGif3M8wEMbrdp0FQcyLRFdgVAiOWFKabkjxHpUuhZqbJ4LGQ9kGuId3pMgaHI5mzq6G7PbIFegjAAobRZZGY94OawRhon2Ta24nV2yvNK9NcDtN1RQlgHAlj9APjmHnqRijni9lL902IViPai9Rqg7JyQuwUlSEAme7zaXwkoRmCndEZCAWmP9SVS0ljrS~KWo6hClVcBmUcwkimb4QNP1t5bEYnBcRydjj7W1bQY5~apStt0h1YDNoPoaSHpdwJeiNcrV5HTORdDDbD3XjQw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
   position: absolute;
   width: 100%;
   height: 834px;
@@ -118,7 +133,7 @@ a:visited {
   top: 135px;
 }
 
-.storefront h3{
+.storefront h3 {
   position: absolute;
   width: 165px;
   left: 165px;
@@ -128,7 +143,8 @@ a:visited {
   font-weight: 700;
   font-size: 30px;
 }
-.signin-page{
+
+.signin-page {
   position: absolute;
   width: 100%;
   height: 719px;
@@ -136,7 +152,8 @@ a:visited {
   top: 135px;
   background: #F2FFFF;
 }
-.signin-box{
+
+.signin-box {
   position: absolute;
   width: 460px;
   height: 360px;
@@ -144,6 +161,7 @@ a:visited {
   top: 180px;
   background: #FFFFFF;
 }
+
 h1 {
   position: absolute;
   left: 510px;
@@ -155,7 +173,7 @@ h1 {
   line-height: 47px;
 }
 
-.create-one{
+.create-one {
   position: absolute;
   width: 214px;
   height: 19px;
@@ -168,10 +186,11 @@ h1 {
   line-height: 19px;
 }
 
-.create-one a{
-  color:red;
+.create-one a {
+  color: red;
 }
-.email{
+
+.email {
   position: relative;
   width: 53px;
   height: 10px;
@@ -183,7 +202,8 @@ h1 {
   font-size: 16px;
   line-height: 19px;
 }
-.email-input{
+
+.email-input {
   box-sizing: border-box;
   position: relative;
   width: 395px;
@@ -193,7 +213,8 @@ h1 {
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
-.password{
+
+.password {
   position: relative;
   width: 53px;
   height: 10px;
@@ -205,7 +226,8 @@ h1 {
   font-size: 16px;
   line-height: 19px;
 }
-.password-input{
+
+.password-input {
   box-sizing: border-box;
   position: relative;
   width: 395px;
@@ -215,16 +237,18 @@ h1 {
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
-button[type="submit"]{
+
+button[type="submit"] {
   position: absolute;
   width: 395px;
   height: 44px;
   left: 33px;
   top: 280px;
-  border-color:rgb(146, 144, 144);
+  border-color: rgb(146, 144, 144);
   background: #A4A4A4;
 }
-#create-h1{
+
+#create-h1 {
   position: absolute;
   width: 100%;
   /* height: 719px; */
@@ -232,15 +256,18 @@ button[type="submit"]{
   top: 49px;
   background: #F2FFFF;
 }
+
 #already {
   position: absolute;
   left: 566px;
   top: 111px;
 }
-#already a{
-  color:red;
+
+#already a {
+  color: red;
 }
-.username{
+
+.username {
   position: relative;
   width: 53px;
   height: 10px;
@@ -252,7 +279,8 @@ button[type="submit"]{
   font-size: 16px;
   line-height: 19px;
 }
-.username-input{
+
+.username-input {
   box-sizing: border-box;
   position: relative;
   width: 395px;
@@ -262,7 +290,8 @@ button[type="submit"]{
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
-.e-mail{
+
+.e-mail {
   position: relative;
   width: 53px;
   height: 10px;
@@ -274,7 +303,8 @@ button[type="submit"]{
   font-size: 16px;
   line-height: 19px;
 }
-.e-mail-input{
+
+.e-mail-input {
   box-sizing: border-box;
   position: relative;
   width: 395px;
@@ -284,7 +314,8 @@ button[type="submit"]{
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
-.password-create{
+
+.password-create {
   position: relative;
   width: 53px;
   height: 10px;
@@ -296,7 +327,8 @@ button[type="submit"]{
   font-size: 16px;
   line-height: 19px;
 }
-.password-create-input{
+
+.password-create-input {
   box-sizing: border-box;
   position: relative;
   width: 395px;
@@ -306,7 +338,8 @@ button[type="submit"]{
   background: #FFFFFF;
   border: 1px solid #F73C52;
 }
-ul{
+
+ul {
   position: relative;
   width: 222px;
   height: 10px;
@@ -314,20 +347,24 @@ ul{
   font-style: bold;
   line-height: 20px
 }
-.skincare{
+
+.skincare {
   position: absolute;
   top: 160px;
   left: 33px;
 }
-.review-pic{
+
+.review-pic {
   max-width: 500px;
 }
-.review-card img{
+
+.review-card img {
   height: 309px;
   left: 315px;
   top: 179px;
-  }
-.products-cards{
+}
+
+.products-cards {
   position: absolute;
   margin: 1rem;
   padding: 0.5rem 0.5rem;
@@ -338,7 +375,8 @@ ul{
   display: flex;
   flex-wrap: wrap;
 }
-.product{
+
+.product {
   width: 300px;
   object-fit: contain;
   object-position: top;
@@ -349,115 +387,131 @@ ul{
   vertical-align: middle;
   height: 480px;
 }
-.product-picture{
+
+.product-picture {
   width: 300px;
   margin-bottom: 0;
 }
 
-.product-brand{
+.product-brand {
   width: 300px;
   margin-top: 0;
   margin-bottom: 5px;
 }
-.product-name{
+
+.product-name {
   width: 300px;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 0px;
 }
-.product-category{
+
+.product-category {
   margin-top: 0;
   width: 300px;
 }
-.product-rating{
+
+.product-rating {
   width: 300px;
   margin-top: 0;
 }
-.product-price{
+
+.product-price {
   width: 300px;
   margin-bottom: 0px;
 }
-.ingredients-cards{
+
+.ingredients-cards {
   position: absolute;
   padding: 1.5rem 1rem;
   text-align: right;
-  display:flex; 
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   top: 120px;
   width: 900px;
   height: auto;
 }
-.ingredient-card{
-  display:flex; 
-  flex-direction:row;
+
+.ingredient-card {
+  display: flex;
+  flex-direction: row;
   background-color: white;
   float: left;
   width: 50%;
   height: auto;
   text-align: center;
 }
-.ingredient-card p{
+
+.ingredient-card p {
   text-align: left;
   margin-left: 10px;
 }
-.ewg-main{
+
+.ewg-main {
   margin-bottom: 10px;
   width: 450px;
 }
-.ewg{
+
+.ewg {
   position: relative;
   width: 30px;
   /* margin-left: 10px; */
 }
-.chart{
+
+.chart {
   border: 2px solid #5EDFDF;
 }
-.reviews-cards{
+
+.reviews-cards {
   position: absolute;
   padding: 0.5rem 0rem;
   text-align: right;
-  display:flex; 
-  flex-direction:column;
-  top:39px;
+  display: flex;
+  flex-direction: column;
+  top: 39px;
   width: 1000px;
   height: auto
-  
 }
-.edit-review-form__header{
+
+.edit-review-form__header {
   position: absolute;
   top: 129px;
   left: 96px;
   width: 100%;
   height: auto;
 }
-.edit-review-form__header input{
+
+.edit-review-form__header input {
   position: relative;
   top: 229px;
   left: 380px;
   width: 500px;
   height: 30px;
 }
+
 /* .edit-submit{
   width: 560px;
 } */
-.myreviews{
+.myreviews {
   top: 129px;
   left: 66px;
   width: 100%;
   height: auto;
 }
-.myreviews-cards{
+
+.myreviews-cards {
   position: absolute;
   margin: 1rem;
   padding: 0.5rem 0.5rem;
-  display:flex; 
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   top: 229px;
   left: 410px;
   width: 1100px;
   height: auto
 }
-.review-card{
+
+.review-card {
   float: right;
   width: 50%;
   height: auto;
@@ -467,16 +521,18 @@ ul{
   background: white;
   border-radius: 13px;
 }
-.w-6{
+
+.w-6 {
   height: 18px;
 }
-.star{
-  display:flex; 
-  flex-direction:row;
+
+.star {
+  display: flex;
+  flex-direction: row;
   position: relative;
   left: 205px;
 }
 
-.error{
+.error {
   font-size: 14px
 }
