@@ -57,3 +57,6 @@ $ npm start --prefix client
 *Signin or Create an account and stay signed in.
 ![Screen Shot 2022-12-13 at 4 58 10 PM](https://user-images.githubusercontent.com/107736255/207453035-e3bef160-6bc3-46bb-9b27-107de2f99c22.png)
 
+
+*Navigate to Admin page http://localhost:3000/admin and have access to add more products/ingredients, and manage users/reviews.
+![Screen Shot 2022-12-13 at 5 00 35 PM](https://user-images.githubusercontent.com/107736255/207453567-17c0e620-733b-48fe-bbb6-3e42f61ef31e.png)
