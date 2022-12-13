@@ -52,3 +52,8 @@ $ npm start --prefix client
 
 *See/enter/edit/delete Reviews
 ![Screen Shot 2022-11-30 at 11 16 24 AM](https://user-images.githubusercontent.com/107736255/207452586-8251b274-b3ff-40bc-bfb8-df354713cf6b.png)
+
+
+*Signin or Create an account and stay signed in.
+![Screen Shot 2022-12-13 at 4 58 10 PM](https://user-images.githubusercontent.com/107736255/207453035-e3bef160-6bc3-46bb-9b27-107de2f99c22.png)
+
