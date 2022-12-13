@@ -39,7 +39,11 @@ visit: http://localhost:3000/admin
   
 $ npm start --prefix client
 
+
+
 [Back to top](#SCCO)
+
+
 ### Usage
 
 * See all ingredients as a chart at a glance
@@ -48,6 +52,10 @@ $ npm start --prefix client
 
 * See all ingredients in detail
 ![Screen Shot 2022-11-30 at 11 15 13 AM](https://user-images.githubusercontent.com/107736255/207452407-6eb184ea-5f41-403a-924e-292d84e9ad14.png)
+
+
+
+[Back to top](#SCCO)
 
 
 *See/enter/edit/delete Reviews
@@ -60,5 +68,7 @@ $ npm start --prefix client
 
 *Navigate to Admin page http://localhost:3000/admin and have access to add more products/ingredients, and manage users/reviews.
 ![Screen Shot 2022-12-13 at 5 00 35 PM](https://user-images.githubusercontent.com/107736255/207453567-17c0e620-733b-48fe-bbb6-3e42f61ef31e.png)
+
+
 
 [Back to top](#SCCO)
