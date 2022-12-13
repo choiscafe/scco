@@ -74,7 +74,7 @@ $ npm start --prefix client
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-###Tables Diagram developed with Figma
+### Tables Diagram developed with Figma
 ![Screen Shot 2022-12-13 at 5 25 47 PM](https://user-images.githubusercontent.com/107736255/207458384-4faeca5d-b530-498f-89f4-c53a1c8866af.png)
 
 
