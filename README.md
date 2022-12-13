@@ -40,3 +40,5 @@ visit: http://localhost:3000/admin
 $ npm start --prefix client
 
 
+### Usage
+![Screen Shot 2022-11-30 at 11 14 48 AM](https://user-images.githubusercontent.com/107736255/207452084-8ab23568-c1e8-4b78-a7d0-db4f88e29290.png)
