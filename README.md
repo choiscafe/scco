@@ -1,24 +1,42 @@
-# README
+# SCCO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Check out cosmetics' ingredients at a glance
 
-Things you may want to cover:
+Before you make a decision on cosmetics' products purchase, visit SCCO to learn about the products detailed ingredients info, and make smart choices for your skin.
 
-* Ruby version
+### Built With
 
-* System dependencies
+* React
 
-* Configuration
+* Ruby on Rails
 
-* Database creation
+* CSS
 
-* Database initialization
+* Chart.js
 
-* How to run the test suite
+* Render (for Deployment - visit: https://project-scco.onrender.com/ )
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+### Getting Started 
+
+#### Prerequisites
+
+
+* Install NPM packages
+
+$ npm install
+
+* Next, run the Rails server in one terminal:
+
+$ rails s
+
+* To access the admin page: 
+
+visit: http://localhost:3000/admin
+
+*  Open another terminal and run the React server:
+  
+$ npm start --prefix client
+
+
