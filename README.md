@@ -18,7 +18,7 @@ Before you make a decision on cosmetics' products purchase, visit SCCO to learn 
 
 
 
-[Back to top](#SCCO)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Getting Started 
