@@ -125,10 +125,10 @@ a:visited {
 .storefront {
   display: block;
   background-position: center;
-  background-image: url(https://s3-alpha-sig.figma.com/img/d9d4/43f9/aea74823f5e974463646bb382d27639e?Expires=1670803200&Signature=HJj5EvT3COtRbHN5rW-wu7Ajg9j3JK8JeYTVKkVwRIhf2P3NHvWdBtJ5N7HpNe0nOGif3M8wEMbrdp0FQcyLRFdgVAiOWFKabkjxHpUuhZqbJ4LGQ9kGuId3pMgaHI5mzq6G7PbIFegjAAobRZZGY94OawRhon2Ta24nV2yvNK9NcDtN1RQlgHAlj9APjmHnqRijni9lL902IViPai9Rqg7JyQuwUlSEAme7zaXwkoRmCndEZCAWmP9SVS0ljrS~KWo6hClVcBmUcwkimb4QNP1t5bEYnBcRydjj7W1bQY5~apStt0h1YDNoPoaSHpdwJeiNcrV5HTORdDDbD3XjQw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+  background-image: url(/public/face.jpg);
   position: absolute;
   width: 100%;
-  height: 834px;
+  height: 100%;
   left: 0px;
   top: 135px;
 }

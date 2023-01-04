@@ -1,8 +1,8 @@
-function Storefront(){
-  
-  return(
+function Storefront() {
+
+  return (
     <span className="storefront">
-      <h3 className="storfront-phrase">Clean & soft Skincare</h3>
+      <h3 className="storefront-phrase">Clean & soft Skincare</h3>
     </span>
   )
 }
