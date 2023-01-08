@@ -2,7 +2,9 @@
 
 ## Check out cosmetics' ingredients at a glance
 
-Before you make a decision on cosmetics' products purchase, visit SCCO to learn about the products detailed ingredients info, and make smart choices for your skin.
+The goal of the app was to help skin product users make informed decisions before making a purchase by providing a clear overview of the ingredients in each product. To display this information, I imported the Chart.js JavaScript library and used it to create a bar chart that showed the total number of ingredients and highlighted those that were low risk, medium risk, or high risk.
+
+This project includes a backend database that stores information about the product and its ingredients, as well as user sign-in data and reviews. The database allows for the creation, reading, updating, and deleting of all stored data.
 
 ### Built With
 
