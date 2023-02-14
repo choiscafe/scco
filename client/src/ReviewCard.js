@@ -30,7 +30,7 @@ function ReviewCard({ review, currentUser, handleDeleteReview }) {
     }).then(res => {
       if (res.ok) {
         handleDeleteReview(id)
-        history.push('/')
+        history.push('/myreviews')
       } else {
         res.json().then(data => setErrors(data.errors))
       }
@@ -47,8 +47,6 @@ function ReviewCard({ review, currentUser, handleDeleteReview }) {
             index={index}
             rating={score}
             hoverRating={hoverRating}
-            // onMouseEnter={onMouseEnter} 
-            // onMouseLeave={onMouseLeave} 
             onSaveRating={onSaveRating} />
         )
       })}</p>
