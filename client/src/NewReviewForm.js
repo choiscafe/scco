@@ -11,7 +11,7 @@ function NewReviewForm({ addReview }) {
     product_id: "",
     user_id: ""
   })
-  
+
   const [errors, setErrors] = useState([])
 
   const history = useHistory()
@@ -19,30 +19,34 @@ function NewReviewForm({ addReview }) {
   function handleChange(event) {
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     });
   }
 
-  
-  function handleSubmit(e){
+
+  function handleSubmit(e) {
     e.preventDefault()
     fetch('/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({...formData})
+      body: JSON.stringify({ ...formData })
     })
-    .then((r) => {
-      if(r.ok){
-        r.json().then(addReview) 
-        setErrors([])
-        alert('Thanks for the review!')
+      .then(r => {
+        if (r.ok) {
+          r.json().then(data => {
+            addReview(data)
+            history.push('/')
+          })
+          // setErrors([])
+          alert('Thanks for the review!')
         } else {
           //Display errors
           r.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
         }
-    })
+      })
+    console.log(1)
   }
 
   return (
@@ -55,9 +59,9 @@ function NewReviewForm({ addReview }) {
         <input type="text" name="picture" onChange={handleChange} value={formData.picture} placeholder="Image URL" /><br></br>
         <input type="number" name="product_id" step="1" onChange={handleChange} value={formData.product_id} placeholder="Product" /><br></br>
         <input type="number" name="user_id" step="1" onChange={handleChange} value={formData.user_id} placeholder="User" /><br></br>
-        <input type="submit" name="submit" value="Create New Review" className="submit"/>
+        <input type="submit" name="submit" value="Create New Review" className="submit" />
       </form>
-      {errors?errors.map(e => <h2 className="error" key={errors} style={{color:'red'}}>{e.toUpperCase()}</h2>):null}
+      {errors ? errors.map(e => <h2 className="error" key={errors} style={{ color: 'red' }}>{e.toUpperCase()}</h2>) : null}
     </div>
   );
 }

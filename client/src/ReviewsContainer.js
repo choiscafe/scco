@@ -4,7 +4,7 @@ function ReviewsContainer({ reviews, currentUser }) {
 
   const reviewsList = reviews.map((review) => {
 
-    return(
+    return (
       <ReviewCard
         key={review.id}
         review={review}
@@ -12,7 +12,7 @@ function ReviewsContainer({ reviews, currentUser }) {
       />
     )
   })
-  return(
+  return (
     <ul className="reviews-cards">{reviewsList}</ul>
   )
 }
